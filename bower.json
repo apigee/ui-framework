@@ -6,7 +6,7 @@
     "Yegor Pomortsev <yegor@apigee.com>"
   ],
   "description": "Web UI framework, Apigee style",
-  "main": "dist/css/apigee-ui-framework.css",
+  "main": "dist/css/ui-framework-core.css",
   "keywords": [
     "apigee",
     "ui",
