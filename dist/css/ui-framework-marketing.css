@@ -1,3 +1,6 @@
+/*!
+ * Apigee UI Framework: Marketing
+ */
 .replace {
   text-indent: 110%;
   white-space: nowrap;
@@ -6553,36 +6556,36 @@ fieldset[disabled] .navbar-primary .btn-link:focus {
 }
 @font-face {
   font-family: 'ARS MaquetteTr';
-  src: url('/fonts/arsmaqligtr-webfont.eot');
-  src: url('/fonts/arsmaqligtr-webfont.eot') format('embedded-opentype'), url('/fonts/arsmaqligtr-webfont.woff') format('woff'), url('/fonts/arsmaqligtr-webfont.ttf') format('truetype'), url('/fonts/arsmaqligtr-webfont.svg') format('svg');
+  src: url('../fonts/arsmaqligtr-webfont.eot');
+  src: url('../fonts/arsmaqligtr-webfont.eot') format('embedded-opentype'), url('../fonts/arsmaqligtr-webfont.woff') format('woff'), url('../fonts/arsmaqligtr-webfont.ttf') format('truetype'), url('../fonts/arsmaqligtr-webfont.svg') format('svg');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'ARS MaquetteTr';
-  src: url('/fonts/arsmaqregtr-webfont.eot');
-  src: url('/fonts/arsmaqregtr-webfont.eot') format('embedded-opentype'), url('/fonts/arsmaqregtr-webfont.woff') format('woff'), url('/fonts/arsmaqregtr-webfont.ttf') format('truetype'), url('/fonts/arsmaqregtr-webfont.svg') format('svg');
+  src: url('../fonts/arsmaqregtr-webfont.eot');
+  src: url('../fonts/arsmaqregtr-webfont.eot') format('embedded-opentype'), url('../fonts/arsmaqregtr-webfont.woff') format('woff'), url('../fonts/arsmaqregtr-webfont.ttf') format('truetype'), url('../fonts/arsmaqregtr-webfont.svg') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'ARS MaquetteTr';
-  src: url('/fonts/arsmaqmedtr-webfont.eot');
-  src: url('/fonts/arsmaqmedtr-webfont.eot') format('embedded-opentype'), url('/fonts/arsmaqmedtr-webfont.woff') format('woff'), url('/fonts/arsmaqmedtr-webfont.ttf') format('truetype'), url('/fonts/arsmaqmedtr-webfont.svg') format('svg');
+  src: url('../fonts/arsmaqmedtr-webfont.eot');
+  src: url('../fonts/arsmaqmedtr-webfont.eot') format('embedded-opentype'), url('../fonts/arsmaqmedtr-webfont.woff') format('woff'), url('../fonts/arsmaqmedtr-webfont.ttf') format('truetype'), url('../fonts/arsmaqmedtr-webfont.svg') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'ARS MaquetteTr';
-  src: url('/fonts/arsmaqboltr-webfont.eot');
-  src: url('/fonts/arsmaqboltr-webfont.eot') format('embedded-opentype'), url('/fonts/arsmaqboltr-webfont.woff') format('woff'), url('/fonts/arsmaqboltr-webfont.ttf') format('truetype'), url('/fonts/arsmaqboltr-webfont.svg') format('svg');
+  src: url('../fonts/arsmaqboltr-webfont.eot');
+  src: url('../fonts/arsmaqboltr-webfont.eot') format('embedded-opentype'), url('../fonts/arsmaqboltr-webfont.woff') format('woff'), url('../fonts/arsmaqboltr-webfont.ttf') format('truetype'), url('../fonts/arsmaqboltr-webfont.svg') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Apigee';
-  src: url('/fonts/Apigee.eot');
-  src: url('/fonts/Apigee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/fonts/Apigee.woff') format('woff'), /* Modern Browsers */ url('/fonts/Apigee.ttf') format('truetype'), /* Safari, Android, iOS */ url('/fonts/Apigee.svg#3a426ca91b8ec4173fa7a5d79e33e97a') format('svg');
+  src: url('../fonts/Apigee.eot');
+  src: url('../fonts/Apigee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/Apigee.woff') format('woff'), /* Modern Browsers */ url('../fonts/Apigee.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/Apigee.svg#3a426ca91b8ec4173fa7a5d79e33e97a') format('svg');
   font-style: normal;
   font-weight: 400;
   
@@ -6602,13 +6605,13 @@ fieldset[disabled] .navbar-primary .btn-link:focus {
   background-size: contain;
 }
 .apigee-logo-primary-bg {
-  background-image: url('/images/logo/apigee_logo_primary_72ppi.png');
+  background-image: url('../images/logo/apigee_logo_primary_72ppi.png');
 }
 .apigee-logo-secondary-bg {
-  background-image: url('/images/logo/apigee_logo_secondary_72ppi.png');
+  background-image: url('../images/logo/apigee_logo_secondary_72ppi.png');
 }
 .navbar .navbar-brand-apigee {
-  background-image: url("/images/logo/apigee_logo_primary_header.png");
+  background-image: url("../images/logo/apigee_logo_primary_header.png");
   padding-left: 103px;
   background-position: 15px;
   background-repeat: no-repeat;
@@ -6616,7 +6619,7 @@ fieldset[disabled] .navbar-primary .btn-link:focus {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .navbar .navbar-brand-apigee {
-    background-image: url("/images/logo/apigee_logo_primary_header@2x.png");
+    background-image: url("../images/logo/apigee_logo_primary_header@2x.png");
     background-size: 73px 25px;
   }
 }
@@ -6628,20 +6631,20 @@ fieldset[disabled] .navbar-primary .btn-link:focus {
   border: 0;
 }
 .navbar.navbar-inverse .navbar-brand-apigee {
-  background-image: url("/images/logo/apigee_logo_monotone_dark_header.png");
+  background-image: url("../images/logo/apigee_logo_monotone_dark_header.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .navbar.navbar-inverse .navbar-brand-apigee {
-    background-image: url("/images/logo/apigee_logo_monotone_dark_header@2x.png");
+    background-image: url("../images/logo/apigee_logo_monotone_dark_header@2x.png");
     background-size: 73px 25px;
   }
 }
 .navbar.navbar-primary .navbar-brand-apigee {
-  background-image: url("/images/logo/apigee_logo_secondary_header.png");
+  background-image: url("../images/logo/apigee_logo_secondary_header.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .navbar.navbar-primary .navbar-brand-apigee {
-    background-image: url("/images/logo/apigee_logo_secondary_header@2x.png");
+    background-image: url("../images/logo/apigee_logo_secondary_header@2x.png");
     background-size: 73px 25px;
   }
 }
