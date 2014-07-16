@@ -48,7 +48,7 @@ $(function() {
     // add new context style
     $('<link>', {
       rel: 'stylesheet',
-      href: '/dist/css/ui-framework-' + context + '.css',
+      href: '../dist/css/ui-framework-' + context + '.css',
       'data-context': context
     }).appendTo('head');
 
