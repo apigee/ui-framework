@@ -1,0 +1,37 @@
+//
+// Navbars
+// --------------------------------------------------
+
+
+.navbar-brand {
+  font-weight: 500;
+}
+
+// Default navbar
+.navbar-default {
+  // Bootstrap bugfix: ensure default color (e.g. for <label>s)
+  color: @navbar-default-color;
+
+  // Links in navbars
+  //
+  // Add a class to ensure links outside the navbar nav are colored correctly.
+
+  .navbar-link {
+    color: @link-color;
+
+    &:hover {
+      color: @link-hover-color;
+    }
+  }
+}
+
+// Inverse navbar
+
+.navbar-inverse {
+  // Bootstrap bugfix: ensure default color (e.g. for <label>s)
+  color: @navbar-inverse-color;
+
+  .navbar-link {
+    text-decoration: underline;
+  }
+}

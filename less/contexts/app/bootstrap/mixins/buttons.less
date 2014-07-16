@@ -1,0 +1,19 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @border) {
+  #gradient > .vertical(@start-color: @background; @end-color: darken(@background, 7%));
+  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+
+  border-color: darken(@border, 7%);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    border-color: darken(@border, 10%);
+  }
+}

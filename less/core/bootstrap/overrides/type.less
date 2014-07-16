@@ -1,0 +1,92 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, h2, h3
+.h1, .h2, .h3 {
+  letter-spacing: -0.01em;
+}
+
+.h5,
+h5 {
+  letter-spacing: 0.01em;
+}
+
+.h6,
+h6 {
+  letter-spacing: 0.02em;
+}
+
+// Body text
+// -------------------------
+
+.lead {
+  font-size: floor((@font-size-base * 1.1));
+  line-height: 1.5;
+
+  @media (min-width: @screen-sm-min) {
+    font-size: ceil((@font-size-base * 1.3));
+  }
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: 0;
+  border-bottom-width: 2px;
+
+  .h1,
+  h1 {
+    font-weight: 500;
+
+    small {
+      font-weight: 400;
+    }
+  }
+}
+
+// Misc
+// -------------------------
+
+// Blockquotes
+blockquote {
+  padding-left: 0;
+  border-left: 0;
+
+  border-top: 3px solid @blockquote-border-color;
+  border-bottom: 3px solid @blockquote-border-color;
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    margin-top: (@line-height-computed / 4);
+
+    &:before {
+      content: '';
+    }
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 0;
+  border-right: 0;
+
+  footer,
+  small,
+  .small {
+    &:after {
+      content: '';
+    }
+  }
+}
+

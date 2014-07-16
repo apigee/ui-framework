@@ -1,0 +1,23 @@
+.bs-example {
+    margin-bottom: 1em;
+}
+.bs-example-modal {
+    background: #ccc;
+}
+.bs-example-modal .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+}
+.bs-example-popover .popover {
+    position: relative;
+    display: block;
+    float: left;
+    width: 200px;
+    margin: 20px;
+    z-index: 0;
+}

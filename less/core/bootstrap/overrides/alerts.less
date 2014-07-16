@@ -1,0 +1,39 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  font-weight: 500;
+
+  // Headings for larger alerts
+  h4 {
+    font-weight: 500;
+  }
+  // Provide class for links that match alerts
+  .alert-link {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+
+// Dismissible alerts
+//
+// Tweak the color because the background is darker
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+  .close {
+    .opacity(.4);
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      .opacity(.7);
+    }
+  }
+}

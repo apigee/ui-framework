@@ -1,0 +1,1836 @@
+<!doctype html>
+<html>
+<head>
+    <title>Apigee UI Framework Test</title>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <style>
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-primary navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-brand-apigee" href="#"><span class="text-hide">Apigee</span>&#8203;UI Framework Test</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="currentContext">core</span> <span class="caret"></span></a>
+                        <ul id="contextDropdown" class="dropdown-menu" role="menu">
+                            <li><a href="#">core</a></li>
+                            <li class="divider"></li>
+                            <li role="presentation" class="dropdown-header">Context</li>
+                            <li><a href="#">app</a></li>
+                            <li><a href="#">marketing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="checkbox navbar-right">
+                    <label for="showKitchenSink">
+                        <input type="checkbox" id="showKitchenSink" checked> Show kitchen sink
+                    </label>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" id="kitchenSink">
+        <div class="jumbotron">
+            <h1>Kitchen Sink</h1>
+            <p class="lead">A quick preview of everything <span class="apigee-logo"><span>Api</span>gee</span> UI Framework has to offer.</p>
+            <p><a href="https://github.com/apigee/ui-framework" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="logo">
+                    <div class="panel-heading"><span class="apigee-logo"><span>Api</span>gee</span> logo <span class="label label-info">Extension</span></div>
+                    <div class="panel-body">
+                        <h1><span class="apigee-logo"><span>Api</span>gee</span></h1>
+                        <pre>&lt;span class=&quot;apigee-logo&quot;&gt;&lt;span&gt;Api&lt;/span&gt;gee&lt;/span&gt;</pre>
+                        <p>If the logo webfont can't be loaded it will display "Apigee" with the default font.</p>
+                        <p>The webfont splits the logo into two parts to properly apply colors to each part:
+                        <span class="apigee-logo">api</span> at the characters <kbd>A</kbd> and <kbd>a</kbd>, and
+                        <span class="apigee-logo">gee</span> at the characters <kbd>G</kbd> and <kbd>g</kbd>.
+                        The characters <kbd>P</kbd>, <kbd>p</kbd>, <kbd>I</kbd>, <kbd>i</kbd>, <kbd>E</kbd>, <kbd>e</kbd>
+                        are blank to make the logo properly reproducible when writing "Apigee" with the font.
+                        </p>
+                        <p>Write only the whole words "Apigee", "api", or "gee" (case insensitive) when using the webfont,
+                        not the individual characters &mdash; this makes your document readable when stylesheets/webfonts
+                        are disabled or cannot be used (e.g. screenreaders), and indexable by search engines for SEO.
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="headings">
+                    <div class="panel-heading">Headings</div>
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h1>Page Header <small>Small Text</small></h1>
+                        </div>
+                        <h1>This is an h1 heading <small>Small text</small></h1>
+                        <h2>This is an h2 heading <small>Small text</small></h2>
+                        <h3>This is an h3 heading <small>Small text</small></h3>
+                        <h4>This is an h4 heading <small>Small text</small></h4>
+                        <h5>This is an h5 heading <small>Small text</small></h5>
+                        <h6>This is an h6 heading <small>Small text</small></h6>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="tables">
+                    <div class="panel-heading">Tables</div>
+                    <div class="panel-body">
+                        <h4>table-hover</h4>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Tables</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Michael</td>
+                                    <td>Are formatted like this</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lucille</td>
+                                    <td>Do you like them?</td>
+                                </tr>
+                                <tr class="success">
+                                    <td>3</td>
+                                    <td>Success</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="info">
+                                    <td>4</td>
+                                    <td>Info</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="warning">
+                                    <td>5</td>
+                                    <td>Warning</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>6</td>
+                                    <td>Danger</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>7</td>
+                                    <td>Active</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>table-striped</h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jane</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Apigee</td>
+                                    <td>Corporation</td>
+                                    <td>@apigee</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>table-bordered</h4>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jane</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Apigee</td>
+                                    <td>Corporation</td>
+                                    <td>@apigee</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>table-condensed</h4>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jane</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Apigee</td>
+                                    <td>Corporation</td>
+                                    <td>@apigee</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>table-book <span class="label label-info">Extension</span></h4>
+                        <table class="table table-book">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jane</td>
+                                    <td>Apigeek</td>
+                                    <td>@apigeek</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Apigee</td>
+                                    <td>Corporation</td>
+                                    <td>@apigee</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="content-formatting">
+                    <div class="panel-heading">Content Formatting</div>
+                    <div class="panel-body">
+                        <p class="lead">This is a lead paragraph. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p>This is an <b>ordinary paragraph</b> that is <i>long enough</i> to wrap to <u>multiple lines</u> so that you can see how the line spacing looks. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory. To edit settings, press <kbd>ctrl + ,</kbd></p>
+                        <p>Use the formula <var>y</var> = <var>m</var><var>x</var> + <var>b</var> to plot a line.</p>
+                        <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+                        <p class="text-muted">Muted color paragraph. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p class="text-warning">Warning color paragraph. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p class="text-danger">Danger color paragraph. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p class="text-info">Info color paragraph. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p class="text-success">Success color paragraph. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p><small>This is text in a <code>small</code> wrapper. <abbr title="No Big Deal">NBD</abbr>, right? Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</small></p>
+                        <hr>
+                        <address><strong>Twitter, Inc.</strong><br>795 Folsom Ave, Suite 600<br>San Francisco, CA 94107<br><abbr title="Phone">P:</abbr> (123) 456-7890</address>
+                        <address class="col-6"><strong>Full Name</strong><br><a href="mailto:#">first.last@example.com</a></address>
+                        <hr>
+                        <blockquote>Here's what a blockquote looks like in Bootstrap. Nullam quis risus eget urna mollis ornare vel eu leo. <small>Use <code>small</code> to identify the source.</small></blockquote>
+                        <blockquote class="blockquote-reverse">Here's what a reversed blockquote looks like in Bootstrap. Nullam quis risus eget urna mollis ornare vel eu leo. <small>Use <code>small</code> to identify the source.</small></blockquote>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul>
+                                    <li>Normal Unordered List</li>
+                                    <li>Can Also Work
+                                        <ul>
+                                            <li>With Nested Children</li>
+                                        </ul>
+                                    </li>
+                                    <li>Adds Bullets to Page</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ol>
+                                    <li>Normal Ordered List</li>
+                                    <li>Can Also Work
+                                        <ol>
+                                            <li>With Nested Children</li>
+                                        </ol>
+                                    </li>
+                                    <li>Adds Bullets to Page</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <hr>
+                        <pre>function preFormatting() {  // looks like this;  var something = somethingElse;  return true;}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="forms">
+                    <div class="panel-heading">Forms</div>
+                    <div class="panel-body">
+                        <form>
+                            <fieldset>
+                                <legend>Legend</legend>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Email address</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">File input</label>
+                                    <input type="file" id="exampleInputFile">
+                                    <p class="help-block">Example block-level help text here.</p>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </fieldset>
+                        </form>
+                        <hr>
+                        <form class="form-inline">
+                            <input type="text" class="form-control" placeholder="Email" style="width: 200px;">&nbsp;&nbsp;
+                            <input type="password" class="form-control" placeholder="Password" style="width: 200px;">
+                            &nbsp;&nbsp;
+                            <div class="checkbox">
+                                <label><input type="checkbox">&nbsp; Remember me</label>
+                            </div>
+                            &nbsp;&nbsp;
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                        </form>
+                        <hr>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group has-warning">
+                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group has-error">
+                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group has-success">
+                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                <div class="col-lg-10">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox">Remember me</label>
+                                    </div><br>
+                                    <button type="submit" class="btn btn-default">Sign in</button>
+                                </div>
+                            </div>
+                        </form>
+                        <hr/>
+                        <form class="bs-example bs-example-form" role="form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div><!-- /btn-group -->
+                                        <input type="text" class="form-control">
+                                    </div><!-- /input-group -->
+                                </div><!-- /.col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div><!-- /btn-group -->
+                                    </div><!-- /input-group -->
+                                </div><!-- /.col-lg-6 -->
+                            </div><!-- /.row -->
+                        </form>
+                        <hr/>
+                        <form class="bs-example bs-example-form" role="form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" class="form-control">
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-lg-6 -->
+                            </div><!-- /.row -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="input-groups">
+                    <div class="panel-heading">Input Groups</div>
+                    <div class="panel-body">
+                        <div class="input-group">
+                            <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div><br>
+                        <div class="input-group">
+                            <input type="text" class="form-control input-lg" placeholder="a large input">
+                            <span class="input-group-addon input-large">.00</span>
+                        </div><br>
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="a small input">
+                            <span class="input-group-addon input-large">.00</span>
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon">$</span><input type="text" class="form-control">
+                            <span class="input-group-addon">.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="panel panel-default" id="buttons">
+                    <div class="panel-heading">Buttons</div>
+                    <div class="panel-body">
+                        <p>
+                        <button type="button" class="btn btn-lg btn-default">Default</button>
+                        <button type="button" class="btn btn-lg btn-primary">Primary</button>
+                        <button type="button" class="btn btn-lg btn-success">Success</button>
+                        <button type="button" class="btn btn-lg btn-info">Info</button>
+                        <button type="button" class="btn btn-lg btn-warning">Warning</button>
+                        <button type="button" class="btn btn-lg btn-danger">Danger</button>
+                        <button type="button" class="btn btn-lg btn-link">Link</button>
+                        </p>
+                        <p>
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                        </p>
+                        <p>
+                        <button type="button" class="btn btn-sm btn-default">Default</button>
+                        <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                        <button type="button" class="btn btn-sm btn-success">Success</button>
+                        <button type="button" class="btn btn-sm btn-info">Info</button>
+                        <button type="button" class="btn btn-sm btn-warning">Warning</button>
+                        <button type="button" class="btn btn-sm btn-danger">Danger</button>
+                        <button type="button" class="btn btn-sm btn-link">Link</button>
+                        </p>
+                        <p>
+                        <button type="button" class="btn btn-xs btn-default">Default</button>
+                        <button type="button" class="btn btn-xs btn-primary">Primary</button>
+                        <button type="button" class="btn btn-xs btn-success">Success</button>
+                        <button type="button" class="btn btn-xs btn-info">Info</button>
+                        <button type="button" class="btn btn-xs btn-warning">Warning</button>
+                        <button type="button" class="btn btn-xs btn-danger">Danger</button>
+                        <button type="button" class="btn btn-xs btn-link">Link</button>
+                        </p>
+                        <p>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star"></span> Glyphicons!</button>
+                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></button>
+                        <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button>
+                        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-info-sign"></span></button>
+                        <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-flash"></span></button>
+                        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                        <button type="button" class="btn btn-link"><span class="glyphicon glyphicon-arrow-right"></span></button>
+                        </p>
+                        <hr/>
+
+                        <div class="bs-example">
+                            <div class="btn-group btn-group-lg">
+                                <button type="button" class="btn btn-default">Left</button>
+                                <button type="button" class="btn btn-default">Middle</button>
+                                <button type="button" class="btn btn-default">Right</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">Left</button>
+                                <button type="button" class="btn btn-default">Middle</button>
+                                <button type="button" class="btn btn-default">Right</button>
+                            </div>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-default">Left</button>
+                                <button type="button" class="btn btn-default">Middle</button>
+                                <button type="button" class="btn btn-default">Right</button>
+                            </div>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-default">Left</button>
+                                <button type="button" class="btn btn-default">Middle</button>
+                                <button type="button" class="btn btn-default">Right</button>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">1</button>
+                                <button type="button" class="btn btn-default">2</button>
+
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        Dropdown
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Dropdown link</a></li>
+                                        <li><a href="#">Dropdown link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default">Left</button>
+                                    <button type="button" class="btn btn-default">Middle</button>
+                                    <button type="button" class="btn btn-default">Right</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">Left</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">Middle</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">Right</button>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="bs-example">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">Default</button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Primary</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">Success</button>
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info">Info</button>
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning">Warning</button>
+                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger">Danger</button>
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-default">Dropup</button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div><!-- /btn-group -->
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-primary">Right dropup</button>
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div><!-- /btn-group -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default" id="images">
+                    <div class="panel-heading">Images</div>
+                    <div class="panel-body">
+                        <p>
+                        <img src="http://placehold.it/100x100" class="img-rounded">
+                        <img src="http://placehold.it/100x100" class="img-circle">
+                        <img src="http://placehold.it/100x100" class="img-thumbnail">
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="dropdowns">
+                    <div class="panel-heading">Dropdowns</div>
+                    <div class="panel-body clearfix">
+                        <div class="dropdown">
+                            <!-- Link or button to toggle dropdown -->
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;">
+                                <li class="dropdown-header">Dropdown header</li>
+                                <li class="disabled">
+                                    <a tabindex="-1" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Another action</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a tabindex="-1" href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="navs">
+                    <div class="panel-heading">Navs</div>
+                    <div class="panel-body clearfix">
+                        <div class="bs-example">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Dropdown <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                                <li class="disabled"><a href="#">Disabled link</a></li>
+                            </ul>
+                        </div>
+                        <div class="bs-example">
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Dropdown <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                                <li class="disabled"><a href="#">Disabled link</a></li>
+                            </ul>
+                        </div>
+                        <div class="bs-example">
+                            <ul class="nav nav-stacked nav-pills">
+                                <li class="active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Dropdown <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                                <li class="disabled"><a href="#">Disabled link</a></li>
+                            </ul>
+                        </div>
+                        <div class="bs-example">
+                            <ul class="nav nav-tabs nav-justified" role="tablist">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Messages</a></li>
+                                <li class="disabled"><a href="#">Disabled link</a></li>
+                            </ul>
+                            <br>
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Messages</a></li>
+                                <li class="disabled"><a href="#">Disabled link</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Breadcrumbs</div>
+                    <div class="panel-body">
+                        <div class="bs-example">
+                            <ol class="breadcrumb">
+                                <li class="active">Home</li>
+                            </ol>
+                            <ol class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li class="active">Library</li>
+                            </ol>
+                            <ol class="breadcrumb" style="margin-bottom: 5px;">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Library</a></li>
+                                <li class="active">Data</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="pagination">
+                    <div class="panel-heading">Pagination</div>
+                    <div class="panel-body">
+                        <div class="bs-example">
+                            <div>
+                                <ul class="pagination pagination-lg">
+                                    <li class="disabled"><a href="#">«</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#">«</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="pagination pagination-sm">
+                                    <li class="disabled"><a href="#">«</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bs-example">
+                            <ul class="pager">
+                                <li><a href="#">Previous</a></li>
+                                <li><a href="#">Next</a></li>
+                            </ul>
+                        </div>
+                        <div class="bs-example">
+                            <ul class="pager">
+                                <li class="previous"><a href="#">← Older</a></li>
+                                <li class="next"><a href="#">Newer →</a></li>
+                            </ul>
+                        </div>
+                        <div class="bs-example">
+                            <ul class="pager">
+                                <li class="previous disabled"><a href="#">← Older</a></li>
+                                <li class="next disabled"><a href="#">Newer →</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Navbar</div>
+            <div class="panel-body">
+                <p>Use the <code>navbar-brand-apigee</code> class to add the <span class="apigee-logo"><span>Api</span>gee</span>
+                logo to the navbar brand (see examples below). Don't forget to keep the "Apigee" as text inside the
+                brand to be SEO/screenreader friendly. Hide the "Apigee" text with the <code>text-hide</code> class &mdash;
+                using the standard <code>apigee-logo</code> markup works, but is not necessary. Separate "Apigee" and the
+                additional brand text with a zero-width space (<code>&amp;#8203;</code>).
+                </p>
+                <h4>navbar-default</h4>
+                <div class="bs-example">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand navbar-brand-apigee" href="#"><span class="text-hide">Apigee</span>&#8203;Default</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="disabled"><a href="#">Disabled</a></li>
+                                </ul>
+                                <form class="navbar-form navbar-left" role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                    <button type="button" class="btn btn-link">Link Button</button>
+                                </form>
+                                <p class="navbar-text navbar-right">Text with <a href="#" class="navbar-link">a link</a></p>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </div>
+                <h4>navbar-inverse</h4>
+                <div class="bs-example">
+                    <nav class="navbar navbar-inverse" role="navigation">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand navbar-brand-apigee" href="#"><span class="text-hide">Apigee</span>&#8203;Inverse</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="disabled"><a href="#">Disabled</a></li>
+                                </ul>
+                                <form class="navbar-form navbar-left" role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                    <button type="button" class="btn btn-link">Link Button</button>
+                                </form>
+                                <p class="navbar-text navbar-right">Text with <a href="#" class="navbar-link">a link</a></p>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </div>
+                <h4>navbar-primary <span class="label label-info">Extension</span></h4>
+                <div class="bs-example">
+                    <nav class="navbar navbar-primary" role="navigation">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand navbar-brand-apigee" href="#"><span class="text-hide">Apigee</span>&#8203;Primary</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="disabled"><a href="#">Disabled</a></li>
+                                </ul>
+                                <form class="navbar-form navbar-left" role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                    <button type="button" class="btn btn-link">Link Button</button>
+                                </form>
+                                <p class="navbar-text navbar-right">Text with <a href="#" class="navbar-link">a link</a></p>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Modals</div>
+            <div class="panel-body">
+                <div class="bs-example bs-example-modal">
+                    <div class="modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                </div>
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Text in a modal</h4>
+                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+                                <h4>Popover in a modal</h4>
+                                <p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+                                <h4>Tooltips in a modal</h4>
+                                <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+                                <hr>
+
+                                <h4>Overflowing text to show scroll behavior</h4>
+                                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+                <div class="bs-example" style="padding-bottom: 24px;">
+                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        Launch demo modal
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Popovers</div>
+            <div class="panel-body">
+                <div class="bs-example bs-example-popover">
+                    <div class="popover top">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover top</h3>
+                        <div class="popover-content">
+                            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="popover right">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover right</h3>
+                        <div class="popover-content">
+                            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="popover bottom">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover bottom</h3>
+
+                        <div class="popover-content">
+                            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="popover left">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover left</h3>
+                        <div class="popover-content">
+                            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="labels">
+                    <div class="panel-heading">Labels</div>
+                    <div class="panel-body">
+                        <h1>
+                            <span class="label label-default">H1 Default</span>
+                            <span class="label label-primary">Primary</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-info">Info</span>
+                            <span class="label label-warning">Warning</span>
+                            <span class="label label-danger">Danger</span>
+                        </h1>
+                        <h2>
+                            <span class="label label-default">H2 Default</span>
+                            <span class="label label-primary">Primary</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-info">Info</span>
+                            <span class="label label-warning">Warning</span>
+                            <span class="label label-danger">Danger</span>
+                        </h2>
+                        <h3>
+                            <span class="label label-default">H3 Default</span>
+                            <span class="label label-primary">Primary</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-info">Info</span>
+                            <span class="label label-warning">Warning</span>
+                            <span class="label label-danger">Danger</span>
+                        </h3>
+                        <h4>
+                            <span class="label label-default">H4 Default</span>
+                            <span class="label label-primary">Primary</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-info">Info</span>
+                            <span class="label label-warning">Warning</span>
+                            <span class="label label-danger">Danger</span>
+                        </h4>
+                        <h5>
+                            <span class="label label-default">H5 Default</span>
+                            <span class="label label-primary">Primary</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-info">Info</span>
+                            <span class="label label-warning">Warning</span>
+                            <span class="label label-danger">Danger</span>
+                        </h5>
+                        <h6>
+                            <span class="label label-default">H6 Default</span>
+                            <span class="label label-primary">Primary</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-info">Info</span>
+                            <span class="label label-warning">Warning</span>
+                            <span class="label label-danger">Danger</span>
+                        </h6>
+                        <p>
+                        <span class="label label-default">Default</span>
+                        <span class="label label-primary">Primary</span>
+                        <span class="label label-success">Success</span>
+                        <span class="label label-info">Info</span>
+                        <span class="label label-warning">Warning</span>
+                        <span class="label label-danger">Danger</span>
+                        </p>
+
+                        <hr/>
+
+                        <h3>Linked Labels</h3>
+                        <p>
+                        <a class="label label-default">Default</a>
+                        <a class="label label-primary">Primary</a>
+                        <a class="label label-success">Success</a>
+                        <a class="label label-info">Info</a>
+                        <a class="label label-warning">Warning</a>
+                        <a class="label label-danger">Danger</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="badges">
+                    <div class="panel-heading">Badges</div>
+                    <div class="panel-body">
+                        <div class="bs-example">
+                            <p><a href="#">Inbox <span class="badge">42</span></a></p>
+                            <p>Inbox <a class="badge">Linked</a></p>
+                        </div>
+
+                        <div class="bs-example">
+                            <ul class="nav nav-pills">
+                                <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Messages <span class="badge">3</span></a></li>
+                            </ul>
+                            <br>
+                            <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+                                <li class="active">
+                                    <a href="#">
+                                        <span class="badge pull-right">42</span>
+                                        Home
+                                    </a>
+                                </li>
+                                <li><a href="#">Profile</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge pull-right">3</span>
+                                        Messages
+                                    </a>
+                                </li>
+                            </ul>
+                            <br>
+                            <button class="btn btn-primary" type="button">
+                                Messages <span class="badge">4</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="alerts">
+                    <div class="panel-heading">Alerts</div>
+                    <div class="panel-body">
+                        <div>
+                            <div class="alert alert-info">
+                                <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, and can't be dismissed.
+                            </div>
+                            <div class="alert alert-dismissible alert-danger">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+                            </div>
+                            <div class="alert alert-dismissible alert-success">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+                            </div>
+                            <div class="alert alert-dismissible alert-warning">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, because it's warning you about something.
+                            </div>
+                            <div class="alert alert-dismissible alert-info">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+                            </div>
+                            <div class="alert alert-dismissible alert-info">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <h4>Warning!</h4>
+                                <p>This is a block style alert.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="tooltips">
+                    <div class="panel-heading">Tooltips</div>
+                    <div class="panel-body">
+                        <div class="bs-example tooltip-demo">
+                            <p>Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="" data-original-title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="" data-original-title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="" data-original-title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="progress">
+                    <div class="panel-heading">Progress Bars</div>
+                    <div class="panel-body">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
+                            <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
+                            <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                        </div>
+                        <div class="bs-example">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">2%</div>
+                            </div>
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    <span class="sr-only">40% Complete (success)</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    <span class="sr-only">20% Complete</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    <span class="sr-only">60% Complete (warning)</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete (danger)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"><span class="sr-only">45% Complete</span></div>
+                            </div>
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" style="width: 35%">
+                                    <span class="sr-only">35% Complete (success)</span>
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                                    <span class="sr-only">20% Complete (warning)</span>
+                                </div>
+                                <div class="progress-bar progress-bar-danger" style="width: 10%">
+                                    <span class="sr-only">10% Complete (danger)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="media-object">
+                    <div class="panel-heading">Media Object</div>
+                    <div class="panel-body">
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="http://placehold.it/64x64">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Media heading</h4>
+                                <p>This is the content for your media.</p>
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="http://placehold.it/64x64">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Media heading</h4>
+                                        <p>This is the content for your media.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <ul class="list-group" id="list-groups">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item disabled">Disabled</li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Cras justo odio</a>
+                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item disabled">Disabled</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item disabled">
+                        <h4 class="list-group-item-heading">Disabled list group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="panel panel-primary" id="panels">
+                    <div class="panel-heading">This is a header</div>
+                    <p class="panel-body">Donec id elit non mi porta gravida at eget metus.</p>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-success">
+                    <div class="panel-heading">This is a header</div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">This is a header</div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">This is a header</div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">This is a header</div>
+                    <p class="panel-body">Donec id elit non mi porta gravida at eget metus.</p>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">This is a header</div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">First Item</li>
+                        <li class="list-group-item">Second Item</li>
+                    </ul>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="panel panel-primary" id="panels">
+                    <div class="panel-heading"><h1 class="panel-title">This is an h1 panel title</h1></div>
+                    <p class="panel-body">Donec id elit non mi porta gravida at eget metus.</p>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h2 class="panel-title">This is an h2 panel title</h2></div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-danger">
+                    <div class="panel-heading"><h3 class="panel-title">This is an h3 panel title</h3></div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-warning">
+                    <div class="panel-heading"><h4 class="panel-title">This is an h4 panel title</h4></div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><h5 class="panel-title">This is an h5 panel title</h5></div>
+                    <p class="panel-body">Donec id elit non mi porta gravida at eget metus.</p>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h6 class="panel-title">This is an h6 panel title</h6></div>
+                    <div class="panel-body">Donec id elit non mi porta gravida at eget metus.</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">First Item</li>
+                        <li class="list-group-item">Second Item</li>
+                    </ul>
+                    <div class="panel-footer">This is a footer</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="wells">
+                    <div class="panel-heading">Wells</div>
+                    <div class="panel-body">
+                        <div class="well well-lg">Large Padding Well</div>
+                        <div class="well">Default Well</div>
+                        <div class="well well-sm">Small Well</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Table in a panel with content</div>
+                    <div class="panel-body">
+                        <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Apigeek</td>
+                                <td>@apigeek</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane</td>
+                                <td>Apigeek</td>
+                                <td>@apigeek</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Apigee</td>
+                                <td>Corporation</td>
+                                <td>@apigee</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Table in a panel</div>
+
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Apigeek</td>
+                                <td>@apigeek</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane</td>
+                                <td>Apigeek</td>
+                                <td>@apigeek</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Apigee</td>
+                                <td>Corporation</td>
+                                <td>@apigee</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Panel with content and a list group</div>
+                    <div class="panel-body">
+                        <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+
+                    <!-- List group -->
+                    <ul class="list-group">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                </div>
+                <div class="panel panel-default" id="collapse">
+                    <div class="panel-heading">Panel group (collapse; accordion)</div>
+                    <div class="panel-body">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            Collapsible Group Item #1
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            Collapsible Group Item #2
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            Collapsible Group Item #3
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="context">
+    </div>
+</body>
+
+</html>

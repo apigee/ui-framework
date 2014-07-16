@@ -1,0 +1,29 @@
+//
+// Panels
+// --------------------------------------------------
+
+// Tables in panels
+//
+// Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
+// watch it go full width.
+
+.panel {
+  // match horizontal padding of the panel in the table
+  > .table,
+  > .table-responsive > .table,
+  > .panel-collapse > .table {
+    > thead,
+    > tbody {
+      > tr {
+        td:first-child,
+        th:first-child {
+          padding-left: @panel-body-padding;
+        }
+        td:last-child,
+        th:last-child {
+          padding-right: @panel-body-padding;
+        }
+      }
+    }
+  }
+}

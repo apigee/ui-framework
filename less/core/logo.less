@@ -1,0 +1,71 @@
+@import "./variables";
+@import "./bootstrap";
+
+// Webfont inline logo
+
+.apigee-logo {
+  font-family: Apigee;
+
+  color: @apigee-grey-01;
+
+  span {
+    color: @apigee-orange;
+  }
+}
+
+// Logo background images
+
+.apigee-logo-primary-bg,
+.apigee-logo-secondary-bg,
+{
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.apigee-logo-primary-bg {
+  background-image: url('@{image-path}logo/apigee_logo_primary_72ppi.png');
+}
+
+.apigee-logo-secondary-bg {
+  background-image: url('@{image-path}logo/apigee_logo_secondary_72ppi.png');
+}
+
+
+// Navbar header logo
+
+.navbar {
+  @logo-height: floor((@navbar-height / 2));
+  @logo-width: floor((@logo-height * 2.95)); // the Apigee logo has an aspect ratio of 2.95:1
+
+  .navbar-brand-apigee {
+    .img-retina('@{image-path}logo/apigee_logo_primary_header.png';
+                '@{image-path}logo/apigee_logo_primary_header@2x.png';
+                @logo-width; @logo-height);
+
+    padding-left: (@navbar-padding-horizontal * 2) + @logo-width;
+
+    background-position: @navbar-padding-horizontal;
+    background-repeat: no-repeat;
+    background-size: @logo-width @logo-height;
+
+    .apigee-logo {
+      .text-hide;
+    }
+  }
+
+  &.navbar-inverse {
+    .navbar-brand-apigee {
+      .img-retina('@{image-path}logo/apigee_logo_monotone_dark_header.png';
+                  '@{image-path}logo/apigee_logo_monotone_dark_header@2x.png';
+                  @logo-width; @logo-height);
+    }
+  }
+
+  &.navbar-primary {
+    .navbar-brand-apigee {
+      .img-retina('@{image-path}logo/apigee_logo_secondary_header.png';
+                  '@{image-path}logo/apigee_logo_secondary_header@2x.png';
+                  @logo-width; @logo-height);
+    }
+  }
+}
