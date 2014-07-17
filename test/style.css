@@ -18,6 +18,6 @@
     display: block;
     float: left;
     width: 200px;
-    margin: 20px;
+    margin: 20px !important;
     z-index: 0;
 }
