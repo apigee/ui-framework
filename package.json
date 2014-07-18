@@ -23,6 +23,7 @@
     "gulp-minify-css": "^0.3.6",
     "gulp-util": "^2.2.20",
     "gulp-watch": "^0.7.0-alpha3",
+    "run-sequence": "^0.3.6",
     "stream-combiner": "^0.2.1"
   },
   "scripts": {
