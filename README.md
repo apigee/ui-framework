@@ -38,9 +38,14 @@ Node.js ([npm](https://www.npmjs.org/)).
 **Note: Do not modify UI Framework itself with application/site specific styles!**
 
 Instead, we recommend using [LESS](http://lesscss.org/) and `@import`ing
-the Apigee UI Framework core or a context. This way, you can selectively
+the Apigee UI Framework core and any context styles. This way, you can selectively
 import core components, override variables/mixins, and use mixins provided by
 Apigee UI Framework in your own styles.
+
+**You will need to define the `@bootstrap-path` variable in your root
+LESS stylesheet** to be the path to the Bootstrap Bower module. Defining it
+elsewhere won't work because LESS scopes variables in `@import` statements
+differently. See the `ui-framework-*.less` files for an example.
 
 Alternatively, you can include a distribution CSS (from the `dist/`
 directory) in your page and add any modifications in a separate stylesheet.
