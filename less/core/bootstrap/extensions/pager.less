@@ -1,0 +1,173 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+.pager {
+  .active {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      color: @pager-active-color;
+      background-color: @pager-active-bg;
+      border-color: @pager-active-border;
+    }
+  }
+}
+
+
+.pager-square {
+  li {
+    > a,
+    > span {
+      border-radius: 0 !important;
+    }
+  }
+}
+
+// Arrows
+//
+// .arrow is outer, .arrow:after is inner
+
+@pager-arrow-width:                         ceil((@pager-padding-vertical + (@line-height-computed / 2)));
+@pager-arrow-outer-width:                   (@pager-arrow-width + 1px);
+
+.pager-arrow {
+  li {
+    > a,
+    > span {
+      position: relative;
+
+      > .arrow {
+        &,
+        &:after {
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          border-color: transparent;
+          border-style: solid;
+          z-index: 2;
+        }
+
+        margin-top: -@pager-padding-vertical;
+        border-width: @pager-arrow-width;
+
+        &:after {
+          border-width: @pager-arrow-width;
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+.pager-arrow {
+  .previous a {
+    margin-left: @pager-arrow-width;
+  }
+  .next a {
+    margin-right: @pager-arrow-width;
+  }
+
+  .left,
+  .previous {
+    .pager-arrow-li(left, right);
+  }
+  .right,
+  .next {
+    .pager-arrow-li(right, left);
+  }
+}
+
+.pager-arrow-li(@direction; @opposite-direction) {
+  > a,
+  > span {
+    padding-@{direction}: (@pager-padding-horizontal / 2);
+
+    border-top-@{direction}-radius: 0;
+    border-bottom-@{direction}-radius: 0;
+
+    > .arrow {
+      @{direction}: 0;
+      border-@{direction}-width: 0;
+      border-@{opposite-direction}-color: @pager-arrow-border;
+      margin-@{direction}: -@pager-arrow-outer-width;
+
+      &:after {
+        content: " ";
+        @{direction}: 1px;
+        border-@{direction}-width: 0;
+        border-@{opposite-direction}-color: @pager-bg;
+        bottom: -@pager-arrow-width;
+      }
+    }
+  }
+
+  > a:hover,
+  > a:focus {
+    > .arrow:after {
+      border-@{opposite-direction}-color: @pager-hover-bg;
+    }
+  }
+
+  &.disabled {
+    > a:hover,
+    > a:focus {
+      > .arrow:after {
+        border-@{opposite-direction}-color: @pager-bg;
+      }
+    }
+  }
+
+  &.active {
+    > a,
+    > span {
+      > .arrow {
+        border-@{opposite-direction}-color: @pager-active-border;
+        &:after {
+          border-@{opposite-direction}-color: @pager-active-bg;
+        }
+      }
+    }
+  }
+}
+
+// Sequences
+//
+// Use this with .pager-arrow
+
+.pager-sequence {
+  .left,
+  .previous {
+    .pager-sequence-li(left, right, first);
+  }
+
+  .right,
+  .next {
+    .pager-sequence-li(right, left, first);
+  }
+}
+
+.pager-sequence-li(@direction; @opposite-direction; @start-item) {
+  // LESS bug: can't use variable in pseudo-selector
+  @start-item-selector: ~':@{start-item}-child';
+
+  float: @opposite-direction;
+
+  > a,
+  > span {
+    padding-@{opposite-direction}: (@pager-padding-horizontal * 2.25);
+    border-top-@{opposite-direction}-radius: 0;
+    border-bottom-@{opposite-direction}-radius: 0;
+  }
+
+  &@{start-item-selector} {
+    > a,
+    > span {
+      padding-@{opposite-direction}: @pager-padding-horizontal;
+      border-top-@{opposite-direction}-radius: @pager-border-radius;
+      border-bottom-@{opposite-direction}-radius: @pager-border-radius;
+    }
+  }
+}
