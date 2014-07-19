@@ -14,8 +14,8 @@ gulp.task('serve', function() {
   return gconnect.server({
     livereload: true,
     root: [
-      __dirname,
-      path.resolve(__dirname, '.tmp')
+      path.resolve(__dirname, '.tmp'),
+      __dirname
     ]
   });
 });
