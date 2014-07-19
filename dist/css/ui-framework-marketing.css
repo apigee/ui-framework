@@ -967,7 +967,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .breadcrumb>li{display:inline-block}
 .breadcrumb>li+li:before{content:"/\00a0";padding:0 5px;color:#ccc}
 .breadcrumb>.active{color:#d0d3d4}
-.pagination{display:inline-block;padding-left:0;margin:25px 0;border-radius:2px}
+.pagination{display:inline-block;padding-left:0;border-radius:2px}
 .pagination>li{display:inline}
 .pagination>li>a,.pagination>li>span{position:relative;float:left;padding:5px 10px;text-decoration:none;color:#fc4c02;background-color:#fff;border:1px solid #d0d3d4;margin-left:-1px}
 .pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:2px;border-top-left-radius:2px}
@@ -983,7 +983,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-bottom-right-radius:0;border-top-right-radius:0}
 .pager{padding-left:0;margin:25px 0;list-style:none;text-align:center}
 .pager li{display:inline}
-.pager li>a,.pager li>span{display:inline-block;padding:5px 14px;background-color:#fff;border:1px solid #d0d3d4;border-radius:15px}
+.pager li>a,.pager li>span{display:inline-block;background-color:#fff;border:1px solid #d0d3d4;border-radius:15px}
 .pager li>a:focus,.pager li>a:hover{text-decoration:none;background-color:#e5e1e6}
 .pager .next>a,.pager .next>span{float:right}
 .pager .previous>a,.pager .previous>span{float:left}
@@ -1346,7 +1346,9 @@ label{letter-spacing:.03em;font-weight:500}
 .navbar-default .navbar-link:hover{color:#54585a}
 .navbar-inverse{color:#fff}
 .navbar-inverse .navbar-link{text-decoration:underline}
+.pagination{margin:12.5px 0}
 .pagination>li>a,.pagination>li>span{line-height:1.21428571}
+.pager li>a,.pager li>span{padding:5px 10px}
 .label{font-weight:400}
 .alert,.alert h4{font-weight:500}
 .alert .alert-link{color:inherit;text-decoration:underline}
@@ -1387,6 +1389,32 @@ label{letter-spacing:.03em;font-weight:500}
 .navbar-primary .navbar-link{color:#fff;text-decoration:underline}
 .navbar-primary .btn-link,.navbar-primary .btn-link:focus,.navbar-primary .btn-link:hover,.navbar-primary .navbar-link:hover{color:#fff}
 .navbar-primary .btn-link[disabled]:focus,.navbar-primary .btn-link[disabled]:hover,fieldset[disabled] .navbar-primary .btn-link:focus,fieldset[disabled] .navbar-primary .btn-link:hover{color:rgba(255,255,255,.4)}
+.pager .active>a,.pager .active>a:focus,.pager .active>a:hover,.pager .active>span{color:#fff;background-color:#fc4c02;border-color:#fc4c02}
+.pager-square li>a,.pager-square li>span{border-radius:0!important}
+.pager-arrow li>a,.pager-arrow li>span{position:relative}
+.pager-arrow li>a>.arrow,.pager-arrow li>span>.arrow{margin-top:-5px;border-width:18px}
+.pager-arrow li>a>.arrow,.pager-arrow li>a>.arrow:after,.pager-arrow li>span>.arrow,.pager-arrow li>span>.arrow:after{position:absolute;display:block;width:0;height:0;border-color:transparent;border-style:solid;z-index:2}
+.pager-arrow li>a>.arrow:after,.pager-arrow li>span>.arrow:after{border-width:18px;content:""}
+.pager-arrow .previous a{margin-left:18px}
+.pager-arrow .next a{margin-right:18px}
+.pager-arrow .left>a,.pager-arrow .left>span,.pager-arrow .previous>a,.pager-arrow .previous>span{padding-left:5px;border-top-left-radius:0;border-bottom-left-radius:0}
+.pager-arrow .left>a>.arrow,.pager-arrow .left>span>.arrow,.pager-arrow .previous>a>.arrow,.pager-arrow .previous>span>.arrow{left:0;border-left-width:0;border-right-color:#c3c7c8;margin-left:-19px}
+.pager-arrow .left>a>.arrow:after,.pager-arrow .left>span>.arrow:after,.pager-arrow .previous>a>.arrow:after,.pager-arrow .previous>span>.arrow:after{content:" ";left:1px;border-left-width:0;border-right-color:#fff;bottom:-18px}
+.pager-arrow .left>a:focus>.arrow:after,.pager-arrow .left>a:hover>.arrow:after,.pager-arrow .previous>a:focus>.arrow:after,.pager-arrow .previous>a:hover>.arrow:after{border-right-color:#e5e1e6}
+.pager-arrow .left.disabled>a:focus>.arrow:after,.pager-arrow .left.disabled>a:hover>.arrow:after,.pager-arrow .previous.disabled>a:focus>.arrow:after,.pager-arrow .previous.disabled>a:hover>.arrow:after{border-right-color:#fff}
+.pager-arrow .left.active>a>.arrow,.pager-arrow .left.active>a>.arrow:after,.pager-arrow .left.active>span>.arrow,.pager-arrow .left.active>span>.arrow:after,.pager-arrow .previous.active>a>.arrow,.pager-arrow .previous.active>a>.arrow:after,.pager-arrow .previous.active>span>.arrow,.pager-arrow .previous.active>span>.arrow:after{border-right-color:#fc4c02}
+.pager-arrow .next>a,.pager-arrow .next>span,.pager-arrow .right>a,.pager-arrow .right>span{padding-right:5px;border-top-right-radius:0;border-bottom-right-radius:0}
+.pager-arrow .next>a>.arrow,.pager-arrow .next>span>.arrow,.pager-arrow .right>a>.arrow,.pager-arrow .right>span>.arrow{right:0;border-right-width:0;border-left-color:#c3c7c8;margin-right:-19px}
+.pager-arrow .next>a>.arrow:after,.pager-arrow .next>span>.arrow:after,.pager-arrow .right>a>.arrow:after,.pager-arrow .right>span>.arrow:after{content:" ";right:1px;border-right-width:0;border-left-color:#fff;bottom:-18px}
+.pager-arrow .next>a:focus>.arrow:after,.pager-arrow .next>a:hover>.arrow:after,.pager-arrow .right>a:focus>.arrow:after,.pager-arrow .right>a:hover>.arrow:after{border-left-color:#e5e1e6}
+.pager-arrow .next.disabled>a:focus>.arrow:after,.pager-arrow .next.disabled>a:hover>.arrow:after,.pager-arrow .right.disabled>a:focus>.arrow:after,.pager-arrow .right.disabled>a:hover>.arrow:after{border-left-color:#fff}
+.pager-arrow .next.active>a>.arrow,.pager-arrow .next.active>a>.arrow:after,.pager-arrow .next.active>span>.arrow,.pager-arrow .next.active>span>.arrow:after,.pager-arrow .right.active>a>.arrow,.pager-arrow .right.active>a>.arrow:after,.pager-arrow .right.active>span>.arrow,.pager-arrow .right.active>span>.arrow:after{border-left-color:#fc4c02}
+.pager-sequence .left,.pager-sequence .previous{float:right}
+.pager-sequence .left>a,.pager-sequence .left>span,.pager-sequence .previous>a,.pager-sequence .previous>span{padding-right:22.5px;border-top-right-radius:0;border-bottom-right-radius:0}
+.pager-sequence .left:first-child>a,.pager-sequence .left:first-child>span,.pager-sequence .previous:first-child>a,.pager-sequence .previous:first-child>span{padding-right:10px;border-top-right-radius:15px;border-bottom-right-radius:15px}
+.pager-sequence .next,.pager-sequence .right{float:left}
+.pager-sequence .next>a,.pager-sequence .next>span,.pager-sequence .right>a,.pager-sequence .right>span{padding-left:22.5px;border-top-left-radius:0;border-bottom-left-radius:0}
+.pager-sequence .next:first-child>a,.pager-sequence .next:first-child>span,.pager-sequence .right:first-child>a,.pager-sequence .right:first-child>span{padding-left:10px;border-top-left-radius:15px;border-bottom-left-radius:15px}
 @font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqligtr-webfont.eot);src:url(../fonts/arsmaqligtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqligtr-webfont.woff) format('woff'),url(../fonts/arsmaqligtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqligtr-webfont.svg) format('svg');font-weight:300;font-style:normal}
 @font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqregtr-webfont.eot);src:url(../fonts/arsmaqregtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqregtr-webfont.woff) format('woff'),url(../fonts/arsmaqregtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqregtr-webfont.svg) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqmedtr-webfont.eot);src:url(../fonts/arsmaqmedtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqmedtr-webfont.woff) format('woff'),url(../fonts/arsmaqmedtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqmedtr-webfont.svg) format('svg');font-weight:500;font-style:normal}
