@@ -1,6 +1,6 @@
 {
   "name": "ui-framework",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/apigee/ui-framework",
   "author": "Yegor Pomortsev <yegor@apigee.com>",
   "description": "Web UI framework, Apigee style",
