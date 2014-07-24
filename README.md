@@ -16,10 +16,44 @@ of:
 ## Quick start
 
 * Clone this repository
-* In your [LESS](http://lesscss.org/) stylesheet, `@import "path/to/ui-framework/less/ui-framework-core.less";` (or another context of your choice)
+* Create a [LESS](http://lesscss.org/) stylesheet that contains the following,
+substituting paths as necessary:
+
+```
+// Import paths
+//
+// LESS variables in @import are scoped to only the root style (here) and
+// the file in which the @import is made (which can't be overridden).
+//
+//** Load Bootstrap from this directory.
+@bootstrap-path:        "/path/to/bootstrap/";
+//** Load Apigee UI Framework from this directory.
+@ui-framework-path:     "/path/to/ui-framework/";
+
+// Core styles
+@import "${ui-framework-path}core";
+
+// Context-specific (choose one if needed)
+// @import "${ui-framework-path}contexts/app";
+// @import "${ui-framework-path}contexts/marketing";
+
+// Optional: override asset paths
+@font-path:               "/path/to/ui-framework/dist/fonts/";
+@image-path:              "/path/to/ui-framework/dist/images/";
+
+// Add or import your styles here
+@import "./your_styles_here.less";
+```
+
+* Compile the stylesheet
+* Include the compiled stylesheet in your page
+* **Remember to include webfonts!** Apigee UI Framework uses [ARS Maquette Web]
+(http://arstype.angusrshamal.com/ars-maquette-2/webfont) or [Lato]
+(http://www.latofonts.com/) if available. If not, it'll use something else
+that won't look as nice.
 
 **Don't use LESS?** You're missing out on important features of Apigee UI Framework (mixins,
-overriding variables). Don't worry, you can still use include the prebuilt CSS stylesheet
+overriding variables). Don't worry, you can still use include the pre-built CSS stylesheet
 for the context of your choice, located in the `dist/css/` directory.
 
 Apigee UI Framework is packaged for both [bower](http://bower.io/) and
