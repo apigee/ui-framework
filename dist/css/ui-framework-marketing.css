@@ -1,6 +1,7 @@
 /*!
  * Apigee UI Framework: Marketing
  */
+.absolute-center{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 .replace{text-indent:110%;white-space:nowrap;overflow:hidden}
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
@@ -258,7 +259,7 @@ select{background:#fff!important}
 .glyphicon-tree-deciduous:before{content:"\e200"}
 *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:transparent}
-body{font-family:"ARS MaquetteTr","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:18px;line-height:1.42857143;color:#707372;background-color:#fff}
+body{font-family:"ARS Maquette Web",Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:18px;line-height:1.42857143;color:#707372;background-color:#fff}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
 a{color:#fc4c02;text-decoration:none}
 a:focus,a:hover{color:#54585a;text-decoration:underline}
@@ -1415,10 +1416,6 @@ label{letter-spacing:.03em;font-weight:500}
 .pager-sequence .next,.pager-sequence .right{float:left}
 .pager-sequence .next>a,.pager-sequence .next>span,.pager-sequence .right>a,.pager-sequence .right>span{padding-left:22.5px;border-top-left-radius:0;border-bottom-left-radius:0}
 .pager-sequence .next:first-child>a,.pager-sequence .next:first-child>span,.pager-sequence .right:first-child>a,.pager-sequence .right:first-child>span{padding-left:10px;border-top-left-radius:15px;border-bottom-left-radius:15px}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqligtr-webfont.eot);src:url(../fonts/arsmaqligtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqligtr-webfont.woff) format('woff'),url(../fonts/arsmaqligtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqligtr-webfont.svg) format('svg');font-weight:300;font-style:normal}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqregtr-webfont.eot);src:url(../fonts/arsmaqregtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqregtr-webfont.woff) format('woff'),url(../fonts/arsmaqregtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqregtr-webfont.svg) format('svg');font-weight:400;font-style:normal}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqmedtr-webfont.eot);src:url(../fonts/arsmaqmedtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqmedtr-webfont.woff) format('woff'),url(../fonts/arsmaqmedtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqmedtr-webfont.svg) format('svg');font-weight:500;font-style:normal}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqboltr-webfont.eot);src:url(../fonts/arsmaqboltr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqboltr-webfont.woff) format('woff'),url(../fonts/arsmaqboltr-webfont.ttf) format('truetype'),url(../fonts/arsmaqboltr-webfont.svg) format('svg');font-weight:700;font-style:normal}
 @font-face{font-family:Apigee;src:url(../fonts/Apigee.eot);src:url(../fonts/Apigee.eot?#iefix) format('embedded-opentype'),url(../fonts/Apigee.woff) format('woff'),url(../fonts/Apigee.ttf) format('truetype'),url(../fonts/Apigee.svg#3a426ca91b8ec4173fa7a5d79e33e97a) format('svg');font-style:normal;font-weight:400}
 .apigee-logo{font-family:Apigee;color:#54585a}
 .apigee-logo span{color:#fc4c02}

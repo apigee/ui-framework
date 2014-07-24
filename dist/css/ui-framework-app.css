@@ -1,6 +1,7 @@
 /*!
  * Apigee UI Framework: App
  */
+.absolute-center{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 .replace{text-indent:110%;white-space:nowrap;overflow:hidden}
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
@@ -258,9 +259,9 @@ select{background:#fff!important}
 .glyphicon-tree-deciduous:before{content:"\e200"}
 *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:transparent}
-body{font-family:"ARS MaquetteTr","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#707372;background-color:#fff}
+body{font-family:"ARS Maquette Web",Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#707372;background-color:#fff}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
-a{color:#fc4c02;text-decoration:none}
+a{color:#298fc2;text-decoration:none}
 a:focus,a:hover{color:#54585a;text-decoration:underline}
 a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}
 figure{margin:0}
@@ -712,7 +713,7 @@ select[multiple].input-lg,textarea.input-lg{height:auto}
 .btn-danger.disabled,.btn-danger.disabled.active,.btn-danger.disabled:active,.btn-danger.disabled:focus,.btn-danger.disabled:hover,.btn-danger[disabled],.btn-danger[disabled].active,.btn-danger[disabled]:active,.btn-danger[disabled]:focus,.btn-danger[disabled]:hover,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger.active,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:hover{background-color:#ac5d5f;border-color:#ac5d5f}
 .btn-danger .badge{color:#ac5d5f;background-color:#fff}
 .btn-danger.active,.btn-danger:active,.btn-danger:focus,.btn-danger:hover,.open>.dropdown-toggle.btn-danger{background-color:#9e5153;border-color:#8e484a}
-.btn-link{color:#fc4c02;font-weight:400;cursor:pointer;border-radius:0}
+.btn-link{color:#298fc2;font-weight:400;cursor:pointer;border-radius:0}
 .btn-link,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link{background-color:transparent;-webkit-box-shadow:none;box-shadow:none}
 .btn-link,.btn-link:active,.btn-link:focus,.btn-link:hover{border-color:transparent}
 .btn-link:focus,.btn-link:hover{color:#54585a;text-decoration:underline;background-color:transparent}
@@ -969,7 +970,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .breadcrumb>.active{color:#d0d3d4}
 .pagination{display:inline-block;padding-left:0;border-radius:2px}
 .pagination>li{display:inline}
-.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:5px 10px;text-decoration:none;color:#fc4c02;background-color:#fff;border:1px solid #d0d3d4;margin-left:-1px}
+.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:5px 10px;text-decoration:none;color:#298fc2;background-color:#fff;border:1px solid #d0d3d4;margin-left:-1px}
 .pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:2px;border-top-left-radius:2px}
 .pagination>li:last-child>a,.pagination>li:last-child>span{border-bottom-right-radius:2px;border-top-right-radius:2px}
 .pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover{color:#54585a;background-color:#e5e1e6;border-color:#d0d3d4}
@@ -1009,7 +1010,7 @@ a.label:focus,a.label:hover{color:rgba(255,255,255,.7);text-decoration:none;curs
 .btn .badge{position:relative;top:-1px}
 .btn-xs .badge{top:0;padding:1px 5px}
 a.badge:focus,a.badge:hover{color:rgba(255,255,255,.7);text-decoration:none;cursor:pointer}
-.nav-pills>.active>a>.badge,a.list-group-item.active>.badge{color:#fc4c02;background-color:#fff}
+.nav-pills>.active>a>.badge,a.list-group-item.active>.badge{color:#298fc2;background-color:#fff}
 .nav-pills>li>a>.badge{margin-left:3px}
 .jumbotron{padding:20px;margin-bottom:20px;color:inherit;background-color:#f6f5f6}
 .jumbotron .h1,.jumbotron h1{color:#54585a}
@@ -1022,7 +1023,7 @@ a.badge:focus,a.badge:hover{color:rgba(255,255,255,.7);text-decoration:none;curs
 .jumbotron .h1,.jumbotron h1{font-size:63px}}
 .thumbnail{display:block;padding:4px;margin-bottom:20px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:2px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
 .thumbnail a>img,.thumbnail>img{margin-left:auto;margin-right:auto}
-a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#fc4c02}
+a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#298fc2}
 .thumbnail .caption{padding:9px;color:#707372}
 .alert{padding:12px;margin-bottom:20px;border:1px solid transparent;border-radius:2px}
 .alert h4{margin-top:0;color:inherit}
@@ -1342,7 +1343,7 @@ label{letter-spacing:.03em;font-weight:500}
 .nav .open>a,.nav .open>a:focus,.nav .open>a:hover{border-color:#e5e1e6}
 .navbar-brand{font-weight:500}
 .navbar-default{color:#707372}
-.navbar-default .navbar-link{color:#fc4c02}
+.navbar-default .navbar-link{color:#298fc2}
 .navbar-default .navbar-link:hover{color:#54585a}
 .navbar-inverse{color:#fff}
 .navbar-inverse .navbar-link{text-decoration:underline}
@@ -1415,10 +1416,6 @@ label{letter-spacing:.03em;font-weight:500}
 .pager-sequence .next,.pager-sequence .right{float:left}
 .pager-sequence .next>a,.pager-sequence .next>span,.pager-sequence .right>a,.pager-sequence .right>span{padding-left:22.5px;border-top-left-radius:0;border-bottom-left-radius:0}
 .pager-sequence .next:first-child>a,.pager-sequence .next:first-child>span,.pager-sequence .right:first-child>a,.pager-sequence .right:first-child>span{padding-left:10px;border-top-left-radius:15px;border-bottom-left-radius:15px}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqligtr-webfont.eot);src:url(../fonts/arsmaqligtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqligtr-webfont.woff) format('woff'),url(../fonts/arsmaqligtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqligtr-webfont.svg) format('svg');font-weight:300;font-style:normal}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqregtr-webfont.eot);src:url(../fonts/arsmaqregtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqregtr-webfont.woff) format('woff'),url(../fonts/arsmaqregtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqregtr-webfont.svg) format('svg');font-weight:400;font-style:normal}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqmedtr-webfont.eot);src:url(../fonts/arsmaqmedtr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqmedtr-webfont.woff) format('woff'),url(../fonts/arsmaqmedtr-webfont.ttf) format('truetype'),url(../fonts/arsmaqmedtr-webfont.svg) format('svg');font-weight:500;font-style:normal}
-@font-face{font-family:'ARS MaquetteTr';src:url(../fonts/arsmaqboltr-webfont.eot);src:url(../fonts/arsmaqboltr-webfont.eot) format('embedded-opentype'),url(../fonts/arsmaqboltr-webfont.woff) format('woff'),url(../fonts/arsmaqboltr-webfont.ttf) format('truetype'),url(../fonts/arsmaqboltr-webfont.svg) format('svg');font-weight:700;font-style:normal}
 @font-face{font-family:Apigee;src:url(../fonts/Apigee.eot);src:url(../fonts/Apigee.eot?#iefix) format('embedded-opentype'),url(../fonts/Apigee.woff) format('woff'),url(../fonts/Apigee.ttf) format('truetype'),url(../fonts/Apigee.svg#3a426ca91b8ec4173fa7a5d79e33e97a) format('svg');font-style:normal;font-weight:400}
 .apigee-logo{font-family:Apigee;color:#54585a}
 .apigee-logo span{color:#fc4c02}
