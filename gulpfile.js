@@ -10,7 +10,7 @@ var path = require('path'),
   streamCombiner = require('stream-combiner'),
   runSequence = require('run-sequence');
 
-gulp.task('serve', function() {
+gulp.task('connect', function() {
   return gconnect.server({
     livereload: true,
     root: [
@@ -74,9 +74,9 @@ gulp.task('build', [
   'less'
 ]);
 
-gulp.task('test', [
+gulp.task('serve', [
   'build',
-  'serve',
+  'connect',
   'livereload',
   'watch'
 ]);

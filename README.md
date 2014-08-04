@@ -86,7 +86,7 @@ directory) in your page and add any modifications in a separate stylesheet.
 
 That said,
 
-* Run `gulp test`. Gulp will watch the source files and rebuild the styles on the fly. 
+* Run `gulp serve`. Gulp will watch the source files and rebuild the styles on the fly. 
 * Open [http://localhost:8080/test](http://localhost:8080/test).
 * Make some changes. Use the [LiveReload extension](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
 for your browser of choice to refresh the test page on rebuild.
