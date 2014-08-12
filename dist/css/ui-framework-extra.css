@@ -1,0 +1,39 @@
+/*!
+ * Apigee UI Framework Extras
+ */
+.swatches:after,.swatches:before{content:" ";display:table}
+.swatches:after{clear:both}
+.swatch{width:6em;height:6em;border-radius:5px;float:left;margin:2px;padding:.5em;font-size:12px}
+.swatch-apigee-orange{color:#fff;background-color:#fc4c02}
+.swatch-apigee-blue{color:#fff;background-color:#298fc2}
+.swatch-apigee-green{color:#fff;background-color:#009f4d}
+.swatch-apigee-grey-00{color:#fff;background-color:#4a494a}
+.swatch-apigee-grey-01{color:#fff;background-color:#54585a}
+.swatch-apigee-grey-02{color:#fff;background-color:#707372}
+.swatch-apigee-grey-03{color:#fff;background-color:#a2aaad}
+.swatch-apigee-grey-04{color:#000;background-color:#d0d3d4}
+.swatch-apigee-grey-05{color:#000;background-color:#e5e1e6}
+.swatch-apigee-grey-06{color:#000;background-color:#edebee}
+.swatch-apigee-grey-07{color:#000;background-color:#f6f5f6}
+.swatch-apigee-dark-magenta{color:#fff;background-color:#813b96}
+.swatch-apigee-bright-orange{color:#fff;background-color:#faa438}
+.swatch-apigee-olive{color:#fff;background-color:#7a9543}
+.swatch-apigee-light-blue{color:#fff;background-color:#5287a2}
+.swatch-apigee-yellow{color:#fff;background-color:#d3990a}
+.swatch-apigee-purple{color:#fff;background-color:#7c5377}
+.swatch-apigee-brown{color:#fff;background-color:#8c6239}
+.swatch-apigee-red{color:#fff;background-color:#ac5d5f}
+.swatch-apigee-dark-blue{color:#fff;background-color:#4a5981}
+.swatch-gray-darkest{color:#fff;background-color:#4a494a}
+.swatch-gray-darker{color:#fff;background-color:#54585a}
+.swatch-gray-dark{color:#fff;background-color:#707372}
+.swatch-gray{color:#fff;background-color:#a2aaad}
+.swatch-gray-light{color:#000;background-color:#d0d3d4}
+.swatch-gray-lighter{color:#000;background-color:#e5e1e6}
+.swatch-gray-lighterer{color:#000;background-color:#edebee}
+.swatch-gray-lightest{color:#000;background-color:#f6f5f6}
+.swatch-brand-primary{color:#fff;background-color:#fc4c02}
+.swatch-brand-success{color:#fff;background-color:#009f4d}
+.swatch-brand-info{color:#fff;background-color:#298fc2}
+.swatch-brand-warning{color:#fff;background-color:#d3990a}
+.swatch-brand-danger{color:#fff;background-color:#ac5d5f}
