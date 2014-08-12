@@ -1,0 +1,69 @@
+//
+// Navbars
+// --------------------------------------------------
+
+// Navbar header logo
+
+.navbar {
+  @logo-height: floor((@navbar-height / 2));
+  @logo-width: floor((@logo-height * 2.95)); // the Apigee logo has an aspect ratio of 2.95:1
+  @logo-position-y: 51%; // to push down the logo image to make it sit on the baseline
+  @brand-inverse-margin: 3px; // inverse margin and extra dimensions on navbar-brand to make it "pop out" on top of navbar
+
+  .navbar-header-apigee {
+    height: @navbar-height;
+  }
+
+  .navbar-brand-apigee {
+    position: relative;
+    top: -@brand-inverse-margin;
+    left: -1px;
+
+    height: @navbar-height + (2 * @brand-inverse-margin);
+
+    margin-right: (@navbar-padding-horizontal / 2);
+
+    padding: (@navbar-padding-vertical + @brand-inverse-margin)
+             (@navbar-padding-horizontal + @brand-inverse-margin);
+    padding-left: (@navbar-padding-horizontal + @brand-inverse-margin + @logo-width);
+
+    .apigee-logo-primary-header-bg(@logo-width; @logo-height);
+    background-position: (@navbar-padding-horizontal + @brand-inverse-margin)
+                         @logo-position-y;
+    background-repeat: no-repeat;
+    background-size: @logo-width @logo-height;
+
+    font-size: @font-size-base;
+    line-height: @line-height-computed;
+
+    .box-shadow(0 0 3px 1px rgba(0,0,0,0.5));
+
+    z-index: (@zindex-navbar + 1);
+
+    .apigee-logo {
+      .text-hide;
+    }
+  }
+
+  .navbar-brand-apigee,
+  .navbar-brand-apigee:hover {
+    background-color: #fff;
+    color: @apigee-grey-01;
+  }
+
+  .navbar-brand-text {
+    font-weight: bold;
+    margin-left: floor(@navbar-padding-horizontal * 0.75);
+  }
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    .navbar-header-apigee {
+      position: relative;
+    }
+
+    .navbar-brand-apigee {
+      position: absolute;
+    }
+  }
+}
+

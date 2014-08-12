@@ -2,9 +2,17 @@
 // Navbars
 // --------------------------------------------------
 
+.navbar {
+  .box-shadow(0 2px 3px rgba(0,0,0,0.2));
+  border-width: 0;
+}
 
 .navbar-brand {
   font-weight: 500;
+}
+
+.navbar-link {
+  text-decoration: underline;
 }
 
 // Default navbar
@@ -12,26 +20,35 @@
   // Bootstrap bugfix: ensure default color (e.g. for <label>s)
   color: @navbar-default-color;
 
-  // Links in navbars
-  //
-  // Add a class to ensure links outside the navbar nav are colored correctly.
+  .navbar-nav {
+    > .inverse > a {
+      background-color: @navbar-inverse-bg;
+      color: @navbar-inverse-link-color;
 
-  .navbar-link {
-    color: @link-color;
-
-    &:hover {
-      color: @link-hover-color;
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-hover-color;
+        background-color: @navbar-inverse-link-hover-bg;
+      }
     }
   }
 }
 
 // Inverse navbar
-
 .navbar-inverse {
   // Bootstrap bugfix: ensure default color (e.g. for <label>s)
   color: @navbar-inverse-color;
 
-  .navbar-link {
-    text-decoration: underline;
+  .navbar-nav {
+    > .inverse > a {
+      background-color: @navbar-default-bg;
+      color: @navbar-default-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-hover-color;
+        background-color: @navbar-default-link-hover-bg;
+      }
+    }
   }
 }
