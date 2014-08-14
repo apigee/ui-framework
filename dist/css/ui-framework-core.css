@@ -1373,8 +1373,7 @@ label{letter-spacing:.03em;font-weight:500}
 .table-book{border-top:2px solid #d0d3d4;border-bottom:2px solid #d0d3d4}
 .table-book>tbody+tbody,.table-book>thead>tr>th{border-width:1px}
 .navbar .navbar-header-apigee{height:40px}
-.navbar .navbar-brand-apigee{position:relative;top:-3px;left:-1px;height:46px;margin-right:7.5px;padding:13px 18px 13px 77px;background-image:url(../images/logo/apigee_logo_primary_header.png);background-position:18px 51%;background-repeat:no-repeat;background-size:59px 20px;font-size:14px;line-height:20px;-webkit-box-shadow:0 0 3px 1px rgba(0,0,0,.5);box-shadow:0 0 3px 1px rgba(0,0,0,.5);z-index:1001}
-@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min--moz-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:2/1),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx){.navbar .navbar-brand-apigee{background-image:url(../images/logo/apigee_logo_primary_header@2x.png);background-size:59px 20px}}
+.navbar .navbar-brand-apigee{position:relative;top:-3px;left:-1px;height:46px;margin-right:7.5px;padding:13px 18px 13px 77px;background-image:url(../images/logo/apigee_logo_primary.svg),none;background-position:18px 51%;background-repeat:no-repeat;background-size:59px 20px;font-size:14px;line-height:20px;-webkit-box-shadow:0 0 3px 1px rgba(0,0,0,.5);box-shadow:0 0 3px 1px rgba(0,0,0,.5);z-index:1001}
 .navbar .navbar-brand-apigee .apigee-logo{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
 .navbar .navbar-brand-apigee,.navbar .navbar-brand-apigee:hover{background-color:#fff;color:#54585a}
 .navbar .navbar-brand-text{font-weight:700;margin-left:11px}
@@ -1407,5 +1406,11 @@ label{letter-spacing:.03em;font-weight:500}
 .pager-sequence .next>a,.pager-sequence .next>span,.pager-sequence .right>a,.pager-sequence .right>span{padding-left:22.5px;border-top-left-radius:0;border-bottom-left-radius:0}
 .pager-sequence .next:first-child>a,.pager-sequence .next:first-child>span,.pager-sequence .right:first-child>a,.pager-sequence .right:first-child>span{padding-left:10px;border-top-left-radius:15px;border-bottom-left-radius:15px}
 @font-face{font-family:Apigee;src:url(../fonts/Apigee.eot);src:url(../fonts/Apigee.eot?#iefix) format('embedded-opentype'),url(../fonts/Apigee.woff) format('woff'),url(../fonts/Apigee.ttf) format('truetype'),url(../fonts/Apigee.svg#3a426ca91b8ec4173fa7a5d79e33e97a) format('svg');font-style:normal;font-weight:400}
+.footer{font-size:12px}
+.footer-content-container{padding:20px 20px 10px}
+.footer-header{margin-top:0;font-size:18px}
+.footer-links{padding-left:0;list-style:none;margin:10px 0}
+.footer-links li{margin:10px 0}
+.footer-copyright{margin-top:10px;padding:10px;border-top:1px solid #f6f5f6;text-align:center}
 .apigee-logo{font-family:Apigee;color:#54585a}
 .apigee-logo span{color:#fc4c02}
