@@ -31,15 +31,15 @@ substituting paths as necessary:
 @ui-framework-path:     "/path/to/ui-framework/";
 
 // Core styles
-@import "${ui-framework-path}core";
+@import "${ui-framework-path}less/core";
 
 // Context-specific (choose one if needed)
-// @import "${ui-framework-path}contexts/app";
-// @import "${ui-framework-path}contexts/marketing";
+// @import "${ui-framework-path}less/contexts/app";
+// @import "${ui-framework-path}less/contexts/marketing";
 
 // Optional: override asset paths
-@font-path:               "/path/to/ui-framework/dist/fonts/";
-@image-path:              "/path/to/ui-framework/dist/images/";
+@font-path:               "${ui-framework-path}fonts/";
+@image-path:              "${ui-framework-path}images/";
 
 // Add or import your styles here
 @import "./your_styles_here.less";
