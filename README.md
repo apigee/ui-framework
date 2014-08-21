@@ -26,7 +26,9 @@ substituting paths as necessary:
 // the file in which the @import is made (which can't be overridden).
 //
 //** Load Bootstrap from this directory.
-@bootstrap-path:        "/path/to/bootstrap/";
+@bootstrap-path:        "/path/to/bower_components/bootstrap/";
+//** Load Font Awesome from this directory.
+@fontawesome-path:      "/path/to/bower_components/fontawesome/";
 //** Load Apigee UI Framework from this directory.
 @ui-framework-path:     "/path/to/ui-framework/";
 
