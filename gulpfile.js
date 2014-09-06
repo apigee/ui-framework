@@ -4,7 +4,6 @@ var path = require('path'),
   gulp = require('gulp'),
   gconnect = require('gulp-connect'),
   gless = require('gulp-less'),
-  gwatch = require('gulp-watch'),
   gutil = require('gulp-util'),
   gminifyCss = require('gulp-minify-css'),
   streamCombiner = require('stream-combiner'),
@@ -21,8 +20,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('livereload', function() {
-  return gulp.src(['.tmp/dist/css/*.css'])
-    .pipe(gwatch())
+  return gulp.src('.tmp/dist/**')
     .pipe(gconnect.reload());
 });
 
@@ -53,18 +51,22 @@ gulp.task('less', function() {
   return combined;
 });
 
-gulp.task('watch', function() {
-  return gulp.watch('less/**/*.less', ['less']);
-});
-
 gulp.task('minify-css', function() {
   return gulp.src('.tmp/dist/css/*.css')
     .pipe(gminifyCss({ keepBreaks: true }))
     .pipe(gulp.dest('.tmp/dist/css'));
 });
 
+gulp.task('watch', function() {
+  return gulp.watch('less/**/*.less', ['less']);
+});
+
+gulp.task('watch-livereload', function() {
+  return gulp.watch('.tmp/dist/**', ['livereload']);
+});
+
 gulp.task('copy', function() {
-  return gulp.src('.tmp/dist/**/*')
+  return gulp.src('.tmp/dist/**')
     .pipe(gulp.dest('dist'));
 });
 
@@ -77,8 +79,8 @@ gulp.task('build', [
 gulp.task('serve', [
   'build',
   'connect',
-  'livereload',
-  'watch'
+  'watch',
+  'watch-livereload'
 ]);
 
 gulp.task('dist', function(done) {
