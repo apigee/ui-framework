@@ -27,8 +27,6 @@ substituting paths as necessary:
 //
 //** Load Bootstrap from this directory.
 @bootstrap-path:        "/path/to/bower_components/bootstrap/";
-//** Load Font Awesome from this directory.
-@fontawesome-path:      "/path/to/bower_components/fontawesome/";
 //** Load Apigee UI Framework from this directory.
 @ui-framework-path:     "/path/to/ui-framework/";
 
