@@ -27,19 +27,19 @@ substituting paths as necessary:
 //
 //** Load Bootstrap from this directory.
 @bootstrap-path:        "/path/to/bower_components/bootstrap/";
-//** Load Apigee UI Framework from this directory.
-@ui-framework-path:     "/path/to/ui-framework/";
 
 // Core styles
-@import "${ui-framework-path}less/core";
+@import "/path/to/bower_components/ui-framework/less/core";
 
 // Context-specific (choose one if needed)
-// @import "${ui-framework-path}less/contexts/app";
-// @import "${ui-framework-path}less/contexts/marketing";
+// @import "/path/to/bower_components/ui-framework/less/contexts/app";
+// @import "/path/to/bower_components/ui-framework/less/contexts/marketing";
 
-// Optional: override asset paths
-@font-path:               "${ui-framework-path}fonts/";
-@image-path:              "${ui-framework-path}images/";
+// Optional: override asset paths (relative to compiled and served CSS)
+@font-path:               "/path/to/ui-framework/dist/fonts/";
+@image-path:              "/path/to/ui-framework/dist/images/";
+//** Load Bootstrap icon fonts (Glyphicons) from this directory.
+@icon-font-path:          "/path/to/bootstrap/dist/fonts/";
 
 // Add or import your styles here
 @import "./your_styles_here.less";
