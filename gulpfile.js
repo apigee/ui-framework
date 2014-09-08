@@ -3,6 +3,7 @@
 var path = require('path'),
   gulp = require('gulp'),
   gconnect = require('gulp-connect'),
+  gchanged = require('gulp-changed'),
   gless = require('gulp-less'),
   gutil = require('gulp-util'),
   gminifyCss = require('gulp-minify-css'),
@@ -26,11 +27,13 @@ gulp.task('livereload', function() {
 
 gulp.task('fonts', function() {
   return gulp.src('fonts/**')
+    .pipe(gchanged('.tmp/dist/fonts'))
     .pipe(gulp.dest('.tmp/dist/fonts'));
 });
 
 gulp.task('images', function() {
   return gulp.src('images/**')
+    .pipe(gchanged('.tmp/dist/images'))
     .pipe(gulp.dest('.tmp/dist/images'));
 });
 
@@ -67,6 +70,7 @@ gulp.task('watch-livereload', function() {
 
 gulp.task('copy', function() {
   return gulp.src('.tmp/dist/**')
+    .pipe(gchanged('dist'))
     .pipe(gulp.dest('dist'));
 });
 
