@@ -6,4 +6,17 @@
 // The dropdown menu (ul)
 .dropdown-menu {
   .box-shadow(0 3px 5px rgba(0,0,0,.15));
+
+  padding: @padding-base-vertical 0;
+
+  // Links within the dropdown menu
+  > li > a {
+    padding: @padding-base-vertical @padding-large-horizontal;
+  }
+}
+
+// Dropdown section headers
+.dropdown-header {
+  display: block;
+  padding: @padding-base-vertical @padding-large-horizontal;
 }
