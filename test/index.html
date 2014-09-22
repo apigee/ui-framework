@@ -11,6 +11,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.4.0/holder.js"></script>
 
     <script type="text/javascript" src="//use.typekit.net/ezw2jtl.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -289,8 +290,8 @@
                         <address><strong>Twitter, Inc.</strong><br>795 Folsom Ave, Suite 600<br>San Francisco, CA 94107<br><abbr title="Phone">P:</abbr> (123) 456-7890</address>
                         <address class="col-6"><strong>Full Name</strong><br><a href="mailto:#">first.last@example.com</a></address>
                         <hr>
-                        <blockquote>Here's what a blockquote looks like in Bootstrap. Nullam quis risus eget urna mollis ornare vel eu leo. <small>Use <code>small</code> to identify the source.</small></blockquote>
-                        <blockquote class="blockquote-reverse">Here's what a reversed blockquote looks like in Bootstrap. Nullam quis risus eget urna mollis ornare vel eu leo. <small>Use <code>small</code> to identify the source.</small></blockquote>
+                        <blockquote>Here's what a blockquote looks like in <span class="apigee-logo"><span>Api</span>gee</span> UI Framework. Nullam quis risus eget urna mollis ornare vel eu leo. <small>Use <code>small</code> to identify the source.</small></blockquote>
+                        <blockquote class="blockquote-reverse">Here's what a reversed blockquote looks like in <span class="apigee-logo"><span>Api</span>gee</span> UI Framework. Nullam quis risus eget urna mollis ornare vel eu leo. <small>Use <code>small</code> to identify the source.</small></blockquote>
                         <hr>
                         <div class="row">
                             <div class="col-xs-6">
@@ -339,9 +340,9 @@
                     <div class="panel-heading">Images</div>
                     <div class="panel-body">
                         <p>
-                        <img src="http://placehold.it/100x100" class="img-rounded">
-                        <img src="http://placehold.it/100x100" class="img-circle">
-                        <img src="http://placehold.it/100x100" class="img-thumbnail">
+                        <img data-src="holder.js/100x100" class="img-rounded">
+                        <img data-src="holder.js/100x100" class="img-circle">
+                        <img data-src="holder.js/100x100" class="img-thumbnail">
                         </p>
                     </div>
                 </div>
@@ -438,13 +439,57 @@
                                         <li><a href="#">Dropdown link</a></li>
                                     </ul>
                                 </div>
+
+                                <button type="button" class="btn btn-default">Left</button>
+                                <button type="button" class="btn btn-default">Middle</button>
+                                <button type="button" class="btn btn-default">Right</button>
                             </div>
+                        </div>
+                        <hr/>
+
+                        <div class="btn-toolbar" role="toolbar">
                             <div class="btn-group">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default">Left</button>
-                                    <button type="button" class="btn btn-default">Middle</button>
-                                    <button type="button" class="btn btn-default">Right</button>
-                                </div>
+                                <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Dropdown
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Dropdown link</a></li>
+                                    <li><a href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Dropdown
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Dropdown link</a></li>
+                                    <li><a href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Dropdown
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Dropdown link</a></li>
+                                    <li><a href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Dropdown
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Dropdown link</a></li>
+                                    <li><a href="#">Dropdown link</a></li>
+                                </ul>
                             </div>
                         </div>
                         <hr/>
@@ -1670,14 +1715,14 @@
                     <div class="panel-body">
                         <div class="media">
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64">
+                                <img class="media-object" data-src="holder.js/64x64">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Media heading</h4>
                                 <p>This is the content for your media.</p>
                                 <div class="media">
                                     <a class="pull-left" href="#">
-                                        <img class="media-object" src="http://placehold.it/64x64">
+                                        <img class="media-object" data-src="holder.js/64x64">
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading">Media heading</h4>
@@ -1826,6 +1871,73 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="panel panel-default" id="thumbnails">
+                <div class="panel-heading">Thumbnails</div>
+                <div class="panel-body">
+                    <div class="bs-example">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-example">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img data-src="holder.js/100%x200">
+                                    <div class="caption">
+                                        <h3>Thumbnail label</h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img data-src="holder.js/100%x200">
+                                    <div class="caption">
+                                        <h3>Thumbnail label</h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img data-src="holder.js/100%x200">
+                                    <div class="caption">
+                                        <h3>Thumbnail label</h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-lg-6">
                 <div class="panel panel-default" id="wells">
