@@ -3,7 +3,7 @@
  */
 .swatches:after,.swatches:before{content:" ";display:table}
 .swatches:after{clear:both}
-.swatch{width:6em;height:6em;border-radius:5px;float:left;margin:2px;padding:.5em;font-size:12px}
+.swatch{width:6em;height:6em;border-radius:0;float:left;padding:.5em;font-size:12px}
 .swatch-apigee-orange{color:#fff;background-color:#fc4c02}
 .swatch-apigee-blue{color:#fff;background-color:#298fc2}
 .swatch-apigee-green{color:#fff;background-color:#009f4d}
