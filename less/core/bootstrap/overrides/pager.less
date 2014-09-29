@@ -8,6 +8,24 @@
     > a,
     > span {
       padding: @pager-padding-vertical @pager-padding-horizontal;
+      transition: background-color @transition-duration-short,
+                  border-color @transition-duration-short,
+                  color @transition-duration-short;
+    }
+
+    > a:hover,
+    > a:focus {
+      border-color: @pager-hover-border;
+    }
+  }
+
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      background-color: @pager-disabled-bg;
+      border-color: @pager-disabled-border;
     }
   }
 }

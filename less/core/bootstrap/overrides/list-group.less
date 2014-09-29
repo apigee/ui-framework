@@ -17,7 +17,16 @@
 // Use on `li`s or `div`s within the `.list-group` parent.
 
 .list-group-item {
-  padding: 8px 10px;
+  transition: background-color @transition-duration-short,
+              color @transition-duration-short;
+}
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+  padding: 8px 15px;
 }
 
 .list-group-item-heading {

@@ -31,9 +31,6 @@
 //
 // .arrow is outer, .arrow:after is inner
 
-@pager-arrow-width:                         ceil((@pager-padding-vertical + (@line-height-computed / 2)));
-@pager-arrow-outer-width:                   (@pager-arrow-width + 1px);
-
 .pager-arrow {
   li {
     > a,
@@ -49,7 +46,7 @@
           height: 0;
           border-color: transparent;
           border-style: solid;
-          z-index: 2;
+          transition: border-color @transition-duration-short;
         }
 
         margin-top: -@pager-padding-vertical;
@@ -65,11 +62,17 @@
 }
 
 .pager-arrow {
-  .previous a {
-    margin-left: @pager-arrow-width;
+  .previous {
+    > a,
+    > span {
+      margin-left: @pager-arrow-width;
+    }
   }
-  .next a {
-    margin-right: @pager-arrow-width;
+  .next {
+    > a,
+    > span {
+      margin-right: @pager-arrow-width;
+    }
   }
 
   .left,
@@ -90,11 +93,13 @@
     border-top-@{direction}-radius: 0;
     border-bottom-@{direction}-radius: 0;
 
+    border-@{direction}: none;
+
     > .arrow {
       @{direction}: 0;
       border-@{direction}-width: 0;
       border-@{opposite-direction}-color: @pager-arrow-border;
-      margin-@{direction}: -@pager-arrow-outer-width;
+      margin-@{direction}: -@pager-arrow-width;
 
       &:after {
         content: " ";
@@ -108,16 +113,26 @@
 
   > a:hover,
   > a:focus {
-    > .arrow:after {
-      border-@{opposite-direction}-color: @pager-hover-bg;
+    > .arrow {
+      & {
+        border-@{opposite-direction}-color: @pager-hover-border;
+      }
+      &:after {
+        border-@{opposite-direction}-color: @pager-hover-bg;
+      }
     }
   }
 
   &.disabled {
+    > a,
     > a:hover,
-    > a:focus {
-      > .arrow:after {
-        border-@{opposite-direction}-color: @pager-bg;
+    > a:focus,
+    > span {
+      > .arrow {
+        border-@{opposite-direction}-color: @pager-disabled-border;
+        &:after {
+          border-@{opposite-direction}-color: @pager-disabled-bg;
+        }
       }
     }
   }
@@ -140,6 +155,15 @@
 // Use this with .pager-arrow
 
 .pager-sequence {
+  li {
+    > a,
+    > span {
+      .arrow {
+        z-index: 2;
+      }
+    }
+  }
+
   .left,
   .previous {
     .pager-sequence-li(left, right, first);

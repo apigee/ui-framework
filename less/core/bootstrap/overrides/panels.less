@@ -2,6 +2,17 @@
 // Panels
 // --------------------------------------------------
 
+// Base class
+.panel {
+  border: none;
+  .box-shadow(@shadow-small);
+}
+
+// Optional heading
+.panel-heading {
+  border: none;
+}
+
 // Tables in panels
 //
 // Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
@@ -26,4 +37,9 @@
       }
     }
   }
+}
+
+// Correctly color the Apigee logo in panel heading
+.panel-heading .apigee-logo {
+  &:extend(.apigee-logo-secondary all);
 }

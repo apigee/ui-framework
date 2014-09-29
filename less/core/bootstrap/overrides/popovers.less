@@ -3,9 +3,16 @@
 // --------------------------------------------------
 
 
+.popover {
+  padding: 0;
+  .box-shadow(@shadow-large);
+}
+
 .popover-title {
+  color: #fff;
   padding: @padding-large-vertical @padding-large-horizontal;
   padding-top: ceil((@padding-large-vertical * 1.2));
+  border-bottom: none;
 }
 
 .popover-content {

@@ -1,11 +1,29 @@
+//== Navs
+//
+//##
+
+//=== Shared nav styles
+//** Nav tab/pill background color
+@nav-link-bg:                         @gray-lightest;
+//** Disabled nav tab/pill background color
+@nav-disabled-link-bg:                transparent;
+
+
 //== Pager
 //
 //##
 
-@pager-active-border:                       @pagination-active-border;
+@pager-hover-border:                        @pager-hover-bg;
 
-// compensate for anti-aliasing making the color lighter
-@pager-arrow-border:                        darken(@pager-border, 5%);
+@pager-active-border:                       @pager-active-bg;
+
+@pager-disabled-bg:                         @body-bg;
+@pager-disabled-border:                     @gray-lighter;
 
 @pager-padding-vertical:                    @padding-base-vertical;
 @pager-padding-horizontal:                  @padding-base-horizontal;
+
+@pager-arrow-border:                        @pager-border;
+
+@pager-arrow-width:                         ceil((@pager-padding-vertical + (@line-height-computed / 2)));
+@pager-arrow-outer-width:                   (@pager-arrow-width + 1px);

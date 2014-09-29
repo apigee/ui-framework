@@ -9,7 +9,10 @@
   > li {
     > a,
     > span {
-      line-height: (@line-height-base * 0.85);
+      border: none;
+      line-height: (@line-height-base * 0.75);
+      transition: background-color @transition-duration-short,
+                  color @transition-duration-short;
     }
   }
 }

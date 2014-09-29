@@ -7,7 +7,9 @@
 // -------------------------
 
 .alert {
+  padding: @padding-large-vertical @alert-padding;
   font-weight: 500;
+  .box-shadow(@shadow-small);
 
   // Headings for larger alerts
   h4 {
@@ -27,6 +29,8 @@
 
 .alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
 .alert-dismissible {
+   padding-right: (@alert-padding + 20);
+
   .close {
     .opacity(.4);
 

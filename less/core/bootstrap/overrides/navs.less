@@ -7,12 +7,53 @@
 // --------------------------------------------------
 
 .nav {
+  > li {
+    > a {
+      transition: background-color @transition-duration-short,
+                  border-color @transition-duration-short,
+                  color @transition-duration-short;
+    }
+  }
+
   // Open dropdowns
   .open > a {
     &,
     &:hover,
     &:focus {
       border-color: @nav-link-hover-bg;
+    }
+  }
+
+  &.disabled > a {
+    transition: background-color 1s,
+                border-color 1s,
+                color 1s;
+  }
+}
+
+// Tabs
+// -------------------------
+
+.nav-tabs {
+  > li {
+    > a {
+      border-bottom: none;
+    }
+  }
+}
+
+// Tabs/Pills
+// -------------------------
+
+.nav-tabs,
+.nav-pills {
+  > li {
+    > a {
+      background-color: @nav-link-bg;
+    }
+
+    &.disabled > a {
+      background-color: @nav-disabled-link-bg;
     }
   }
 }

@@ -5,7 +5,7 @@
 
 // The dropdown menu (ul)
 .dropdown-menu {
-  .box-shadow(0 3px 5px rgba(0,0,0,.15));
+  .box-shadow(@shadow-medium);
 
   padding: @padding-base-vertical 0;
 
@@ -19,4 +19,10 @@
 .dropdown-header {
   display: block;
   padding: @padding-base-vertical @padding-large-horizontal;
+}
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+  transition: background-color @transition-duration-short,
+              color @transition-duration-short;
 }
