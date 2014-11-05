@@ -33,6 +33,14 @@
     background-repeat: no-repeat;
     background-size: @logo-width @logo-height;
 
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #fff;
+      color: @apigee-grey-01;
+    }
+
     line-height: @line-height-computed;
 
     .box-shadow(0 0 3px 1px rgba(0,0,0,0.5));
@@ -42,13 +50,6 @@
     .apigee-logo {
       .text-hide;
     }
-  }
-
-  .navbar-brand-apigee,
-  .navbar-brand-apigee:hover,
-  .navbar-brand-apigee:active {
-    background-color: #fff;
-    color: @apigee-grey-01;
   }
 
   .navbar-brand-text {
