@@ -39,7 +39,7 @@ gulp.task('images', function() {
 
 gulp.task('less', function() {
   var combined = streamCombiner(
-    gulp.src('less/ui-framework*.less'),
+    gulp.src('less/dist/*.less'),
     gless(),
     gulp.dest('.tmp/dist/css')
   );
