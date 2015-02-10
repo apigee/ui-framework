@@ -19,16 +19,15 @@
 .list-group-item {
   transition: background-color @transition-duration-short,
               color @transition-duration-short;
-}
-
-// Individual list items
-//
-// Use on `li`s or `div`s within the `.list-group` parent.
-
-.list-group-item {
   padding: 8px 15px;
 }
 
+
+// Custom content options
+//
+// Extra classes for creating well-formatted content within `.list-group-item`s.
+
 .list-group-item-heading {
   margin-top: (@line-height-computed / 8);
+  font-weight: 600;
 }
