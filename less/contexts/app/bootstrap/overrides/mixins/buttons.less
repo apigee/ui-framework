@@ -12,13 +12,18 @@
   #gradient > .vertical(@start-color: @background; @end-color: darken(@background, 7%));
   .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
 
-  border-color: darken(@border, 7%);
-
   &:hover,
   &:focus,
+  &.focus,
   &:active,
   &.active,
   .open > .dropdown-toggle& {
-    border-color: darken(@border, 10%);
+    #gradient > .vertical(@start-color: darken(@background, 5%); @end-color: darken(@background, 9%));
+    .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+
+    color: @color;
+    border-color: darken(@border, 12%);
   }
+
+  border-color: darken(@border, 7%);
 }
