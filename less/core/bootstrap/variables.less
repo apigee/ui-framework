@@ -425,7 +425,7 @@
 
 @nav-tabs-link-hover-border-color:          transparent;
 
-@nav-tabs-active-link-hover-bg:             @body-bg;
+@nav-tabs-active-link-hover-bg:             #fff;
 @nav-tabs-active-link-hover-color:          @gray-dark;
 @nav-tabs-active-link-hover-border-color:   @gray-light;
 
@@ -443,7 +443,7 @@
 //##
 
 @pagination-color:                     @link-color;
-@pagination-bg:                        @gray-lightest;
+@pagination-bg:                        @gray-lighterer;
 @pagination-border:                    @pagination-bg;
 
 @pagination-hover-color:               @link-hover-color;
@@ -455,7 +455,7 @@
 @pagination-active-border:             @pagination-active-bg;
 
 @pagination-disabled-color:            @gray-light;
-@pagination-disabled-bg:               @body-bg;
+@pagination-disabled-bg:               transparent;
 @pagination-disabled-border:           @pagination-disabled-bg;
 
 
@@ -480,9 +480,9 @@
 //##
 
 @jumbotron-padding:              20px;
-@jumbotron-color:                inherit;
-@jumbotron-bg:                   @gray-lightest;
-@jumbotron-heading-color:        @gray-darker;
+@jumbotron-color:                @gray-darker;
+@jumbotron-bg:                   @gray-lighterer;
+@jumbotron-heading-color:        @gray-dark;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 
 
@@ -530,7 +530,7 @@
 //##
 
 //** Popover body background color
-@popover-bg:                          @body-bg;
+@popover-bg:                          #fff;
 //** Popover maximum width
 @popover-max-width:                   276px;
 //** Popover border color
@@ -663,7 +663,7 @@
 //##
 
 //** Background color on `.list-group-item`
-@list-group-bg:                 @body-bg;
+@list-group-bg:                 #fff;
 //** `.list-group-item` border color
 @list-group-border:             @gray-light;
 //** List group border radius
@@ -696,7 +696,7 @@
 //
 //##
 
-@panel-bg:                    @body-bg;
+@panel-bg:                    #fff;
 @panel-body-padding:          @padding-large-vertical @padding-large-horizontal;
 @panel-heading-padding:       @panel-body-padding;
 @panel-footer-padding:        @panel-body-padding;
@@ -704,7 +704,7 @@
 
 //** Border color for elements within panels
 @panel-inner-border:          @gray-light;
-@panel-footer-bg:             @gray-lightest;
+@panel-footer-bg:             @gray-lighterer;
 
 @panel-default-text:          #fff;
 @panel-default-border:        transparent;
@@ -738,7 +738,7 @@
 //** Padding around the thumbnail image
 @thumbnail-padding:           4px;
 //** Thumbnail background color
-@thumbnail-bg:                @body-bg;
+@thumbnail-bg:                @panel-bg;
 //** Thumbnail border color
 @thumbnail-border:            #ddd;
 //** Thumbnail border radius
