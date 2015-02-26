@@ -4,8 +4,8 @@
   // Set the border and box shadow on specific inputs to match
   .form-control {
     &:focus {
-      @shadow: inset 0 1px 1px rgba(0,0,0,.075), inset 2px 0 0 fadeout(@border-color, 30%), inset -2px 0 0 fadeout(@border-color, 30%);
-      //@shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px 1px fadeout(@border-color, 30%);
+      @shadow: inset 0 1px 1px rgba(0,0,0,.075),
+               inset 0 -1px 0 @border-color;
       .box-shadow(@shadow);
     }
   }
@@ -13,10 +13,12 @@
 
 // Form control focus state
 .form-control-focus(@color: @input-border-focus) {
-  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
   &:focus {
-    @shadow: inset 0 1px 1px rgba(0,0,0,.075), inset 2px 0 0 @color-rgba, inset -2px 0 0 @color-rgba;
+    @shadow: inset 0 1px 1px rgba(0,0,0,.075),
+             inset 0 -1px 0 @color;
     .box-shadow(@shadow);
-    //.box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px 1px @{color-rgba}");
+
+    border-color: mix(@input-border, @color, 50%);
+    border-color-bottom: @color;
   }
 }
