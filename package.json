@@ -4,8 +4,8 @@
   "homepage": "https://github.com/apigee/ui-framework",
   "author": "Yegor Pomortsev <yegor@apigee.com>",
   "description": "Web UI framework, Apigee style",
-  "style": "dist/css/ui-framework.css",
-  "less": "less/ui-framework.css",
+  "style": "dist/css/ui-framework-core.css",
+  "less": "less/dist/ui-framework-core.less",
   "keywords": [
     "apigee",
     "ui",
@@ -27,7 +27,7 @@
     "stream-combiner": "^0.2.1"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "Apache-2.0",
   "repository": {
