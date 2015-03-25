@@ -5,33 +5,65 @@
 // Navbar header logo
 
 .navbar {
-  @logo-height: floor((@navbar-height * 0.65));
-  @logo-width: floor((@logo-height * 2.95)); // the Apigee logo has an aspect ratio of 2.95:1
+  @logo-height: floor(@navbar-height * 0.575);
+  @logo-width: floor(@logo-height * 2.95); // the Apigee logo has an aspect ratio of 2.95:1
   @logo-position-y: 51.5%; // push down the logo image to make it sit on the baseline
-  @brand-inverse-margin: 3px; // inverse margin and extra dimensions on navbar-brand to make it "pop out" on top of navbar
+
+  @plaque-inverse-margin: 2px; // inverse margin and extra dimensions on navbar-brand-apigee-plaque
+                               // to make it "pop out" on top of navbar
 
   .navbar-header-apigee {
     height: @navbar-height;
   }
 
-  .navbar-brand-apigee {
+  .navbar-brand-apigee,
+  .navbar-brand-apigee-plaque {
     position: relative;
+
+    background-repeat: no-repeat;
+    background-size: @logo-width @logo-height;
+
+    line-height: @line-height-computed;
+
+    z-index: (@zindex-navbar + 1);
+
+    .navbar-brand-text {
+      font-weight: bold;
+      margin-left: floor(@logo-width * 0.15);
+    }
+
+    .apigee-logo {
+      .text-hide;
+    }
+  }
+
+  .navbar-brand-apigee {
+    height: @navbar-height;
+
+    padding: @navbar-padding-vertical 
+             @navbar-padding-horizontal;
+    padding-left: (@navbar-padding-horizontal + @logo-width);
+
+    .apigee-logo-secondary-header-bg(@logo-width; @logo-height);
+    background-position: @navbar-padding-horizontal
+                         @logo-position-y;
+  }
+
+  .navbar-brand-apigee-plaque {
     // top: -@brand-inverse-margin; // looks better on top of page when not pulled up
     left: -1px;
 
-    height: @navbar-height + (2 * @brand-inverse-margin);
+    height: @navbar-height + (2 * @plaque-inverse-margin);
 
     margin-right: (@navbar-padding-horizontal / 2);
 
-    padding: (@navbar-padding-vertical + @brand-inverse-margin)
-             (@navbar-padding-horizontal + @brand-inverse-margin);
-    padding-left: (@navbar-padding-horizontal + @brand-inverse-margin + @logo-width);
+    padding: (@navbar-padding-vertical + @plaque-inverse-margin)
+             (@navbar-padding-horizontal + @plaque-inverse-margin);
+    padding-left: (@navbar-padding-horizontal + @plaque-inverse-margin + @logo-width);
 
     .apigee-logo-primary-header-bg(@logo-width; @logo-height);
-    background-position: (@navbar-padding-horizontal + @brand-inverse-margin)
+    background-position: (@navbar-padding-horizontal + @plaque-inverse-margin)
                          @logo-position-y;
-    background-repeat: no-repeat;
-    background-size: @logo-width @logo-height;
 
     &,
     &:hover,
@@ -41,21 +73,9 @@
       color: @apigee-grey-01;
     }
 
-    line-height: @line-height-computed;
-
     .box-shadow(0 0 3px 1px rgba(0,0,0,0.5));
-
-    z-index: (@zindex-navbar + 1);
-
-    .apigee-logo {
-      .text-hide;
-    }
   }
 
-  .navbar-brand-text {
-    font-weight: bold;
-    margin-left: floor(@logo-width * 0.15);
-  }
 
   @media (max-width: @grid-float-breakpoint-max) {
     .navbar-header-apigee {
