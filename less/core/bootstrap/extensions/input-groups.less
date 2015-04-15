@@ -1,0 +1,25 @@
+//
+// Input groups
+// --------------------------------------------------
+
+
+.input-group-inner {
+  display: block;
+
+  .input-group-addon {
+    position: absolute;
+    right: 0; // FIXME
+    z-index: 3;
+    background: transparent;
+    border-color: transparent;
+    height: 100%;
+  }
+}
+
+.form-inline {
+  @media (min-width: @screen-sm-min) {
+    .input-group-inner {
+      display: inline-block;
+    }
+  }
+}
