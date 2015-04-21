@@ -5,77 +5,99 @@
 // Navbar header logo
 
 .navbar {
-  @logo-height: floor(@navbar-height * 0.575);
-  @logo-width: floor(@logo-height * 2.95); // the Apigee logo has an aspect ratio of 2.95:1
+  @logo-height: floor((@navbar-height * 0.65));
+  @logo-width: floor((@logo-height * 2.95)); // the Apigee logo has an aspect ratio of 2.95:1
   @logo-position-y: 51.5%; // push down the logo image to make it sit on the baseline
-
-  @plaque-inverse-margin: 2px; // inverse margin and extra dimensions on navbar-brand-apigee-plaque
-                               // to make it "pop out" on top of navbar
+  @brand-inverse-margin: 3px; // inverse margin and extra dimensions on navbar-brand to make it "pop out" on top of navbar
 
   .navbar-header-apigee {
     height: @navbar-height;
   }
 
-  .navbar-brand-apigee,
-  .navbar-brand-apigee-plaque {
+  .navbar-brand-apigee {
     position: relative;
+    // top: -@brand-inverse-margin; // looks better on top of page when not pulled up
+    left: -1px;
 
+    height: @navbar-height + (2 * @brand-inverse-margin);
+
+    margin-right: (@navbar-padding-horizontal / 2);
+
+    padding: (@navbar-padding-vertical + @brand-inverse-margin)
+             (@navbar-padding-horizontal + @brand-inverse-margin);
+    padding-left: (@navbar-padding-horizontal + @brand-inverse-margin + @logo-width);
+
+    .apigee-logo-primary-header-bg(@logo-width; @logo-height);
+    background-position: (@navbar-padding-horizontal + @brand-inverse-margin)
+                         @logo-position-y;
     background-repeat: no-repeat;
     background-size: @logo-width @logo-height;
 
     line-height: @line-height-computed;
 
-    z-index: (@zindex-navbar + 1);
+    .box-shadow(0 0 3px 1px rgba(0,0,0,0.5));
 
-    .navbar-brand-text {
-      font-weight: bold;
-      margin-left: floor(@logo-width * 0.15);
-    }
+    z-index: (@zindex-navbar + 1);
 
     .apigee-logo {
       .text-hide;
     }
   }
 
-  .navbar-brand-apigee {
-    height: @navbar-height;
-
-    padding: @navbar-padding-vertical 
-             @navbar-padding-horizontal;
-    padding-left: (@navbar-padding-horizontal + @logo-width);
-
-    .apigee-logo-secondary-header-bg(@logo-width; @logo-height);
-    background-position: @navbar-padding-horizontal
-                         @logo-position-y;
+  .navbar-brand-apigee,
+  .navbar-brand-apigee:hover,
+  .navbar-brand-apigee:active {
+    background-color: #fff;
+    color: @apigee-grey-01;
   }
 
-  .navbar-brand-apigee-plaque {
-    // top: -@brand-inverse-margin; // looks better on top of page when not pulled up
-    left: -1px;
+  .navbar-brand-text {
+    font-weight: bold;
+    margin-left: floor(@logo-width * 0.15);
+  }
 
-    height: @navbar-height + (2 * @plaque-inverse-margin);
+  .navbar-left-apigee {
+    float: left;
+    padding-left: 12px;
+    padding-right: 24px;
+    padding-top: (@navbar-padding-vertical)-2;
+    padding-bottom: @navbar-padding-vertical;
+    font-size: 1.05em;
+  }
 
-    margin-right: (@navbar-padding-horizontal / 2);
-
-    padding: (@navbar-padding-vertical + @plaque-inverse-margin)
-             (@navbar-padding-horizontal + @plaque-inverse-margin);
-    padding-left: (@navbar-padding-horizontal + @plaque-inverse-margin + @logo-width);
-
-    .apigee-logo-primary-header-bg(@logo-width; @logo-height);
-    background-position: (@navbar-padding-horizontal + @plaque-inverse-margin)
-                         @logo-position-y;
-
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: #fff;
-      color: @apigee-grey-01;
+  @media (min-width: 440px) and (max-width: @grid-float-breakpoint) {
+    .navbar-left-apigee {
+      margin-top:-50px;
+      margin-left: 130px;
+      position: relative;
+      //max-width: 300px;
     }
-
-    .box-shadow(0 0 3px 1px rgba(0,0,0,0.5));
   }
 
+  @media (min-width: 0px) and (max-width: 440px) {
+    .navbar-left-apigee {
+      visibility: hidden !important;
+      display: none;
+      position: absolute;
+    }
+  }
+
+  //@media (min-width: 768px) and (max-width: 1000px) {
+  @media (min-width: @grid-float-breakpoint-max) and (max-width: 1200px) {
+    .navbar-left-apigee {
+      visibility: hidden !important;
+      display: none;
+      position: absolute;
+    }
+  }
+
+  /*
+  @media (max-width: @screen-sm) {
+    .navbar-left-apigee {
+      outline: 1px solid #0f0;
+    }
+  }
+  */
 
   @media (max-width: @grid-float-breakpoint-max) {
     .navbar-header-apigee {
@@ -88,3 +110,52 @@
   }
 }
 
+.navbar-page-text {
+  color: @navbar-default-link-color;
+
+  a {
+    text-decoration: none;
+    color: @apigee-grey-06;
+  }
+}
+
+.navbar-left {
+  overflow-x: visible;
+  padding-right: @navbar-padding-horizontal;
+  padding-left:  @navbar-padding-horizontal;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  &:extend(.clearfix all);
+  -webkit-overflow-scrolling: touch;
+
+  &.in {
+    overflow-y: auto;
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+
+    &.collapse {
+      display: block !important;
+      visibility: visible !important;
+      height: auto !important;
+      padding-bottom: 0; // Override default setting
+      overflow: visible !important;
+    }
+
+    &.in {
+      overflow-y: visible;
+    }
+
+    // Undo the collapse side padding for navbars with containers to ensure
+    // alignment of right-aligned contents.
+    .navbar-fixed-top &,
+    .navbar-static-top &,
+    .navbar-fixed-bottom & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

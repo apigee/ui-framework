@@ -4,11 +4,25 @@
 
 
 // Media query variables.
+@mobile:  ~"screen and (max-width: @{screen-sm-min})";
 @tablet:  ~"screen and (min-width: @{screen-sm-min})";
 @normal:  ~"screen and (min-width: @{screen-md-min})";
 @wide:    ~"screen and (min-width: @{screen-lg-min})";
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 24px;
+}
+
 html {
+  min-width: 400px;
   &.overlay-open .navbar-fixed-top {
     z-index: 400;
   }
@@ -128,6 +142,35 @@ body {
   padding-top: 35px;
   padding-bottom: 36px;
   border-top: 1px solid #E5E5E5;
+}
+footer.footer {
+    border-top: 1px solid #e5e5e5;
+    background-color: #4a494a;
+    color: #a6a8ab;
+    line-height: 20px;
+    margin-top: 35px;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 16px;
+    .footer-background-container, .footer-content-container {
+        background: inherit;
+        .container {
+        }
+    }
+    ul {
+        margin-left: 0;
+        li {
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    .col-sm-2, .col-sm-2 address {
+        color: #a6a8ab;
+        line-height: 30px;
+        strong {
+            font-weight: normal;
+        }
+    }
 }
 
 // Element invisible fix
@@ -668,4 +711,121 @@ table {
 
 .alert-danger a {
   color: darken(@alert-danger-text, 10%);
+}
+
+ul.accordion_nav {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+    li {
+        margin-top: .5em;
+        .accordion_child {
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+    }
+    a.nav-dropdown {
+        width: 100%;
+        display: block;
+        padding: 0 1em;
+        font-size: 110%;
+        line-height: 1.5;
+        background-color: @gray-light;
+        border: 1px solid @gray;
+        color: #fff;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        &:hover {
+            background-color: @gray;
+        }
+        &.nav-path-selected {
+            font-weight: bold;
+        }
+        &.accordion_parent {
+            background-color: transparent !important;
+            border: none;
+            color: @link-color;
+            font-size: 130%;
+            padding-left: 0;
+            &:hover {
+                color: @link-hover-color;
+            }
+        }
+    }
+    a.nav-selected {
+        font-weight: bold;
+    }
+}
+
+.login-page {
+    .login-title {
+        padding: 0;
+        margin-bottom: 65px;
+        color: white;
+        text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+    }
+    .login-form {
+        height: 460px;
+    }
+    .login-row {
+        height: 100%;
+    }
+    .types {
+        color: #9b9b9b;
+        padding: 15px 35px;
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%;
+    }
+    .ccm-concrete-authentication-type-svg>svg {
+        width: 16px;
+    }
+    .controls {
+        color: #9b9b9b;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 35px;
+        height: 100%;
+        font-size: 16px;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        hr {
+            border-color: #9b9b9b;
+        }
+    }
+    ul.auth-types {
+        margin: 20px 0px 0px 0px;
+        padding: 0;
+    }
+    ul.auth-types>li>.fa, .login-page ul.auth-types>li svg {
+        position: absolute;
+        top: 2px;
+        left: 0px;
+    }
+    ul.auth-types>li {
+        list-style-type: none;
+        cursor: pointer;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        transition: color .25s;
+        position: relative;
+    }
+    ul.auth-types>li:hover {
+        color: #cfcfcf;
+    }
+    ul.auth-types>li.active {
+        color: white;
+        cursor: auto;
+    }
+    .background-credit {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: right;
+        padding: 10px 30px;
+        color: #989898;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }

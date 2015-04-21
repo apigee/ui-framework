@@ -1,0 +1,32 @@
+/*!
+ * Apigee UI Framework: Marketing
+ */
+
+// Import paths
+//
+// LESS variables in @import are scoped to only the root style (here) and
+// the file in which the @import is made (which can't be overridden).
+//
+//** Load Bootstrap from this directory.
+
+//Adding this to fix a bug in bootstrap???
+//@link-hover-decoration: "none";
+
+//
+@bootstrap-path:        "../../bower_components/bootstrap/";
+
+// Core styles
+@import "./core";
+
+@icon-font-path:          "../../bower_components/bootstrap/dist/fonts/";
+
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
+@import "./contexts/marketing";
+
+@import "./site.less";
+
+// concrete5 styles
+@import "./concrete/body.less";
+@import "./concrete/navbar.less";
+@import "./concrete/navigation.less";
