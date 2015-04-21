@@ -24,7 +24,7 @@ something different!
 * Copy `dist/` into your project
 * Include one of the `dist/css/ui-framework-context-*.css` stylesheets in your page
 
-You be miss out on important features of Apigee UI Framework, like mixins and variables
+You will miss out on important features of Apigee UI Framework, like mixins and variables
 if you use the pre-built CSS instead of LESS.
 
 ## Integrating into an existing product (proper way)
