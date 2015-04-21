@@ -1,5 +1,7 @@
 # Apigee UI Framework
 
+[![Bower](https://img.shields.io/bower/v/apigee/ui-framework.svg?style=flat-square)]()
+
 A common set of styles and components for front-end applications and static content.
 
 ## [Demo](http://apigee.github.io/ui-framework/test/)
@@ -10,14 +12,36 @@ Apigee UI Framework is an extension of [Bootstrap](http://getbootstrap.com/) con
 of:
 
 * A common *core* that defines the Apigee brand look and feel, and generic extensions
-* *Contexts* that extend the core to provide domain-specific styling and components (e.g. web
-  application or marketing site)
+* *Contexts* that include and extend the core to provide domain-specific styling and
+  components (e.g. web application or marketing site)
 
-## Quick start
+Use the context-specific stylesheet that suits your need, or just the core to build
+something different!
 
-* Clone this repository
-* Create a [LESS](http://lesscss.org/) stylesheet that contains the following,
-substituting paths as necessary:
+## Integrating into an existing product (easy way)
+
+* Clone this repository or download an archive of [the latest release](https://github.com/apigee/ui-framework/releases)
+* Copy `dist/` into your project
+* Include one of the `dist/css/ui-framework-context-*.css` stylesheets in your page
+
+You be miss out on important features of Apigee UI Framework, like mixins and variables
+if you use the pre-built CSS instead of LESS.
+
+## Integrating into an existing product (proper way)
+
+You will need to set up [bower](http://bower.io) and [LESS](http://lesscss.org)
+compilation in your project.
+
+* Install UI Framework with bower:
+
+    bower install ui-framework
+
+This will also install bootstrap and jQuery as dependencies.
+jQuery is only needed for bootstrap's JavaScript components,
+if you want to use them.
+
+* Create a new LESS stylesheet that contains the following,
+  substituting paths as necessary:
 
 ```
 // Import paths
@@ -36,28 +60,18 @@ substituting paths as necessary:
 // @import "/path/to/bower_components/ui-framework/less/contexts/marketing";
 
 // Optional: override asset paths (relative to compiled and served CSS)
-@font-path:               "/path/to/ui-framework/dist/fonts/";
-@image-path:              "/path/to/ui-framework/dist/images/";
-//** Load Bootstrap icon fonts (Glyphicons) from this directory.
-@icon-font-path:          "/path/to/bootstrap/dist/fonts/";
+@font-path:               "/server/path/to/ui-framework/dist/fonts/";
+@image-path:              "/server/path/to/ui-framework/dist/images/";
+//** Load Bootstrap icon fonts (Glyphicons) from this directory (default is @font-path above).
+@icon-font-path:          "/server/path/to/bootstrap/dist/fonts/";
 
-// Add or import your styles here
+// Add or import the rest of your styles here
 @import "./your_styles_here.less";
 ```
 
-* Compile the stylesheet
-* Include the compiled stylesheet in your page
-* **Remember to include webfonts!** Apigee UI Framework uses [ARS Maquette Web]
-(http://arstype.angusrshamal.com/ars-maquette-2/webfont) or [Lato]
-(http://www.latofonts.com/) if available. If not, it'll use something else
-that won't look as nice.
+* Compile the stylesheet and include it in your page
 
-**Don't use LESS?** You're missing out on important features of Apigee UI Framework (mixins,
-overriding variables). Don't worry, you can still use include the pre-built CSS stylesheet
-for the context of your choice, located in the `dist/css/` directory.
 
-Apigee UI Framework is packaged for both [bower](http://bower.io/) and
-Node.js ([npm](https://www.npmjs.org/)).
 
 ## Extending
 
