@@ -662,7 +662,7 @@ select[multiple],select[size]{height:auto}
 input[type=file]:focus,input[type=checkbox]:focus,input[type=radio]:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}
 output{display:block;padding-top:8px;font-size:14px;line-height:1.5;color:#707372}
 .form-control{display:block;width:100%;height:37px;padding:7px 12px;font-size:14px;line-height:1.5;color:#707372;background-color:#fff;background-image:none;border:1px solid #a2aaad;border-radius:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
-.form-control:focus{outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #fc4c02;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #fc4c02;border-color:#cf7b58;border-color-bottom:#fc4c02}
+.form-control:focus{border-color:#e16835;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
 .form-control::-moz-placeholder{color:#d0d3d4;opacity:1}
 .form-control:-ms-input-placeholder{color:#d0d3d4}
 .form-control::-webkit-input-placeholder{color:#d0d3d4}
@@ -707,19 +707,19 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 .has-success .form-control:focus{border-color:#00572a}
 .has-success .input-group-addon{color:#008a43;border-color:#008a43;background-color:#ddf2e4}
 .has-success .form-control-feedback{color:#008a43}
-.has-success .form-control:focus{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #008a43;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #008a43}
+.has-success .form-control:focus{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
 .has-warning .checkbox,.has-warning .checkbox-inline,.has-warning .control-label,.has-warning .help-block,.has-warning .radio,.has-warning .radio-inline,.has-warning.checkbox label,.has-warning.checkbox-inline label,.has-warning.radio label,.has-warning.radio-inline label{color:#b78509}
 .has-warning .form-control{border-color:#b78509;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
 .has-warning .form-control:focus{border-color:#866106}
 .has-warning .input-group-addon{color:#b78509;border-color:#b78509;background-color:#f9f6de}
 .has-warning .form-control-feedback{color:#b78509}
-.has-warning .form-control:focus{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #b78509;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #b78509}
+.has-warning .form-control:focus{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
 .has-error .checkbox,.has-error .checkbox-inline,.has-error .control-label,.has-error .help-block,.has-error .radio,.has-error .radio-inline,.has-error.checkbox label,.has-error.checkbox-inline label,.has-error.radio label,.has-error.radio-inline label{color:#aa1115}
 .has-error .form-control{border-color:#aa1115;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
 .has-error .form-control:focus{border-color:#7c0d0f}
 .has-error .input-group-addon{color:#aa1115;border-color:#aa1115;background-color:#f7e0e0}
 .has-error .form-control-feedback{color:#aa1115}
-.has-error .form-control:focus{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #aa1115;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),inset 0 -1px 0 #aa1115}
+.has-error .form-control:focus{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
 .has-feedback label~.form-control-feedback{top:26px}
 .has-feedback label.sr-only~.form-control-feedback{top:0}
 .help-block{display:block;margin-top:5px;margin-bottom:10px;color:#b0b2b2}
