@@ -8,11 +8,28 @@
 
   .input-group-addon {
     position: absolute;
-    right: 0; // FIXME
+    right: 0; // redundant
     z-index: 3;
     background: transparent;
     border-color: transparent;
     height: 100%;
+    line-height: @line-height-computed;
+  }
+}
+
+.input-group-inner-left {
+  .input-group-addon {
+    left: 0;
+  }
+
+  .form-control {
+    padding-left: 2.5em;
+  }
+}
+
+.input-group-inner-right {
+  .input-group-addon {
+    right: 0;
   }
 }
 
