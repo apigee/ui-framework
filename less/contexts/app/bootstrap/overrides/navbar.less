@@ -1,0 +1,54 @@
+//
+// Navbars
+// --------------------------------------------------
+
+// Navbar header logo
+
+.navbar {
+  .navbar-brand-apigee,
+  .navbar-brand-apigee-plaque {
+    .navbar-brand-text {
+      font-family: @font-family-monospace;
+
+      &:before,
+      &:after {
+        display: inline-block;
+      }
+
+      &:before {
+        content: '{';
+        margin-right: 0.25em;
+      }
+
+      &:after {
+        content: '}';
+        margin-left: 0.25em;
+      }
+    }
+
+  }
+}
+
+.navbar-default {
+  .navbar-brand-apigee,
+  .navbar-brand-apigee-plaque {
+    .navbar-brand-text {
+      &:before,
+      &:after {
+        color: @brand-primary;
+      }
+    }
+  }
+}
+
+.navbar-inverse {
+  .navbar-brand-apigee,
+  .navbar-brand-apigee-plaque {
+    .navbar-brand-text {
+      &:before,
+      &:after {
+        color: @navbar-default-bg;
+      }
+    }
+  }
+}
