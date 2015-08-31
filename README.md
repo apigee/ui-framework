@@ -25,11 +25,11 @@ something different!
 * Include one of the `dist/css/ui-framework-context-*.css` stylesheets in your page
 
 You will miss out on important features of Apigee UI Framework, like mixins and variables
-if you use the pre-built CSS instead of LESS.
+if you use the pre-built CSS instead of Less.
 
 ## Integrating into an existing product (proper way)
 
-You will need to set up [bower](http://bower.io) and [LESS](http://lesscss.org)
+You will need to set up [bower](http://bower.io) and [Less](http://lesscss.org)
 compilation in your project.
 
 * Install UI Framework with bower:
@@ -40,13 +40,13 @@ This will also install bootstrap and jQuery as dependencies.
 jQuery is only needed for bootstrap's JavaScript components,
 if you want to use them.
 
-* Create a new LESS stylesheet that contains the following,
+* Create a new Less stylesheet that contains the following,
   substituting paths as necessary:
 
 ```
 // Import paths
 //
-// LESS variables in @import are scoped to only the root style (here) and
+// Less variables in @import are scoped to only the root style (here) and
 // the file in which the @import is made (which can't be overridden).
 //
 //** Load Bootstrap from this directory.
@@ -85,14 +85,14 @@ if you want to use them.
 
 **Note: Do not modify UI Framework itself with application/site specific styles!**
 
-Instead, we recommend using [LESS](http://lesscss.org/) and `@import`ing
+Instead, we recommend using [Less](http://lesscss.org/) and `@import`ing
 the Apigee UI Framework core and any context styles. This way, you can selectively
 import core components, override variables/mixins, and use mixins provided by
 Apigee UI Framework in your own styles.
 
 **You will need to define the `@bootstrap-path` variable in your root
-LESS stylesheet** to be the path to the Bootstrap Bower module. Defining it
-elsewhere won't work because LESS scopes variables in `@import` statements
+Less stylesheet** to be the path to the Bootstrap Bower module. Defining it
+elsewhere won't work because Less scopes variables in `@import` statements
 differently. See the `ui-framework-*.less` files for an example.
 
 Alternatively, you can include a distribution CSS (from the `dist/`
