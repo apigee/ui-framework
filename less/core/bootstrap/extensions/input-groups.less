@@ -12,14 +12,17 @@
     z-index: 3;
     background: transparent;
     border-color: transparent;
+    width: auto;
     height: 100%;
     line-height: @line-height-computed;
+    padding-left: @padding-base-horizontal - 1px;
   }
 }
 
 .input-group-inner-left {
   .input-group-addon {
     left: 0;
+    width: 1em !important;
   }
 
   .form-control {
