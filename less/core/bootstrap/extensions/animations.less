@@ -1,0 +1,55 @@
+//
+// Animations and transitions for Bootstrap components
+// --------------------------------------------------
+
+.collapsing {
+  .transition-duration(@transition-duration-short);
+
+  &.in-add,
+  &.in-add-active {
+    transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000) !important; /* easeOutCirc */
+    //cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
+    //ease-out !important;
+  }
+
+  &.in-remove,
+  &.in-remove-active {
+    transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335) !important; /* easeInCirc */
+    //cubic-bezier(0.550, 0.055, 0.675, 0.190) !important; /* easeInCubic */
+    /* ease-in !important; */
+  }
+}
+
+.dropdown {
+  .dropdown-menu {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+  }
+
+  &.open-add,
+  &.open-remove {
+    &,
+    .dropdown-menu {
+      transition: @transition-duration-short linear all;
+    }
+
+    .dropdown-menu {
+      display: block;
+    }
+  }
+
+  &.open,
+  &.open-add.open-add-active {
+    .dropdown-menu {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* &.open-remove.open-remove-active {
+    .dropdown-menu {
+      opacity: 0;
+      transform: scale(0.8) translateY(-10px);
+    }
+  } */
+}
